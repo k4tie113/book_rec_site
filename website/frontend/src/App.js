@@ -1,24 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import logo from './images/fake_logo.png';
+import SearchForm from './components/SearchForm';
+
+function ContactPage() {
+  return (
+    <div style={{ textAlign: 'center', padding: '50px' }}>
+      <h2>Please let us know your feedback!</h2>
+      <p>go talk to moukthika nellutla: <a href="contact moukthika nellutla">1328highstreet@OHIO.com</a></p>
+    </div>
+  );
+}
+
+function HomePage() {
+  return (
+    <>
+      <div style={{ textAlign: 'center', marginTop: '40px' }}>
+        <img src={logo} alt="Book Logo" style={{ height: '200px' }} />
+      </div>
+      <SearchForm />
+    </>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div style={{ fontFamily: 'Arial' }}>
+        {/* Navbar */}
+
+        <nav style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '40px',
+          padding: '20px',
+          backgroundColor: '#f4f4f4',
+          fontSize: '18px'
+        }}>
+          <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
+          <Link to="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact Us</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
