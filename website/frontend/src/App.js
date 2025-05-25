@@ -7,7 +7,7 @@ function ContactPage() {
   return (
     <div style={{ textAlign: 'center', padding: '50px' }}>
       <h2>Please let us know your feedback!</h2>
-      <p>go talk to moukthika nellutla: <a href="contact moukthika nellutla">7372 rainbow drive</a></p>
+      <p>go talk to moukthika nellutla: <a href="contact moukthika nellutla">no</a></p>
     </div>
   );
 }
@@ -34,7 +34,7 @@ function App() {
           justifyContent: 'center',
           gap: '40px',
           padding: '20px',
-          backgroundColor: '#f4f4f4',
+          backgroundColor: '#b6cec7',
           fontSize: '18px'
         }}>
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
