@@ -7,7 +7,7 @@ function ContactPage() {
   return (
     <div style={{ textAlign: 'center', padding: '50px' }}>
       <h2>Please let us know your feedback!</h2>
-      <p>go talk to moukthika nellutla: <a href="contact moukthika nellutla">1328highstreet@OHIO.com</a></p>
+      <p>go talk to moukthika nellutla: <a href="contact moukthika nellutla">7372 rainbow drive</a></p>
     </div>
   );
 }
