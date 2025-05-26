@@ -9,7 +9,7 @@ ACCEPTED_SHELVES = set([
     'coming-of-age', 'sci-fi', 'magic', 'urban-fantasy', 'action', 'family', 'dystopian',
     'drama', 'thriller', 'suspense', 'paranormal-romance', 'children’s', 'adult', 'kids', 'teens', 'youth', 'survival',
     'trilogy', 'post-apocalyptic', 'mythology', 'childhood-books', 'vampires', 'crime',
-    'futuristic', 'lgbtq'
+    'futuristic', 'LGBTQ'
 ])
 
 
