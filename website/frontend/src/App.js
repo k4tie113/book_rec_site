@@ -56,7 +56,19 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
-      <div style={{ fontFamily: 'Georgia'}}>
+      <div style={{ fontFamily: 'Georgia', backgroundColor: '#d8e0bb', minHeight: '100vh' }}>
+        {/* Welcome Header */}
+        <header style={{
+          textAlign: 'center',
+          padding: '30px 0 10px 0',
+          fontSize: '32px',
+          fontWeight: 'bold',
+          backgroundColor: '#86a3c3',
+          color: '#333',
+        }}>
+          Welcome
+        </header>
+        
         {/* Navbar */}
 
         <nav style={{
