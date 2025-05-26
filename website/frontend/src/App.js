@@ -6,6 +6,7 @@ import SearchForm from './components/SearchForm';
 import { motion } from 'framer-motion';
 
 
+
 function ContactPage() {
   return (
     <motion.div
@@ -68,7 +69,7 @@ function App() {
         }}>
           Welcome
         </header>
-        
+
         {/* Navbar */}
 
         <nav style={{
