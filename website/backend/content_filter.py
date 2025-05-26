@@ -7,8 +7,7 @@ ACCEPTED_SHELVES = set([
     'young-adult', 'fiction', 'romance', 'teen', 'contemporary', 'fantasy', 'adventure',
     'realistic-fiction', 'mystery', 'high-school', 'supernatural', 'science-fiction',
     'coming-of-age', 'sci-fi', 'magic', 'urban-fantasy', 'action', 'family', 'dystopian',
-    'drama', 'thriller', 'suspense', 'paranormal-romance', 'horror', 'children’s',
-    'stand-alones', 'love-triangle', 'adult', 'kids', 'teens', 'youth', 'survival',
+    'drama', 'thriller', 'suspense', 'paranormal-romance', 'children’s', 'adult', 'kids', 'teens', 'youth', 'survival',
     'trilogy', 'post-apocalyptic', 'mythology', 'childhood-books', 'vampires', 'crime',
     'futuristic', 'lgbtq'
 ])
@@ -23,6 +22,12 @@ def load_books(file_path, max_records=10000):
                 break
             books.append(json.loads(line))
     return pd.DataFrame(books)
+
+# ---------- if this genre is in the top shelves
+def genre_in_top_shelves(shelves, genre_keyword, top_n=6):
+    top_shelves = sorted(shelves, key=lambda x: int(x['count']), reverse=True)[:top_n]
+    return any(genre_keyword.lower() == s['name'].lower() for s in top_shelves)
+
 
 # -------------- returns the top n shelves given the shelf list
 def simplify_shelves(shelf_list, top_n=3):
@@ -43,7 +48,7 @@ def filter_shelves(shelves):
 
 
 # ------------- returns a list of the filtered books along with a certain score for each of the book
-def recommend_books(df, genre_keyword, min_pages, max_pages, min_rating):
+def recommend_books(df, genre_keyword, min_pages, max_pages):
     def has_genre(shelves):
         return any(
             genre_keyword.lower() in s['name'].lower()
@@ -61,7 +66,7 @@ def recommend_books(df, genre_keyword, min_pages, max_pages, min_rating):
     # Apply filtering
     df = df[
         (df['ratings_count'] > 500) & # must have more than 500 ratings
-        (df['popular_shelves'].apply(lambda s: any(int(s['count']) >= 1000 for s in s if 'count' in s))) # must have more than 1000 on the 'popular shelves'
+        (df['popular_shelves'].apply(lambda s: any(int(s['count']) >= 500 for s in s if 'count' in s))) # must have more than 1000 on the 'popular shelves'
     ]
     df = df[df['language_code'].isin(['eng', 'en-US', 'en-GB', 'english'])]  # or just df['language_code'].str.startswith('en')
 
@@ -71,14 +76,15 @@ def recommend_books(df, genre_keyword, min_pages, max_pages, min_rating):
 
 
     filtered = df[
-        (df['num_pages'] >= min_pages) &
-        (df['num_pages'] <= max_pages) &
-        (df['average_rating'] >= min_rating) &
-        (df['popular_shelves'].apply(has_genre))
+    (df['num_pages'] >= min_pages) &
+    (df['num_pages'] <= max_pages) &
+    (df['popular_shelves'].apply(lambda s: has_genre(s) and genre_in_top_shelves(s, genre_keyword)))
     ].copy()
 
+
+
     # ---------------- computing score for each of the books
-    w1, w2, w3 = 4, 2, 1 # these weights are for how importnat the rating vs other stuff is.
+    w1, w2, w3 = 5, 2, 2 # these weights are for how importnat the rating vs other stuff is.
 
     filtered['genre_shelf_count'] = filtered['popular_shelves'].apply(lambda s: get_shelf_count_for_genre(s, genre_keyword))
     filtered['score'] = (
@@ -98,16 +104,15 @@ def recommend_books(df, genre_keyword, min_pages, max_pages, min_rating):
 
 # ------------------ START PROCESS: this method loads in the dataset and called recommend_books. it hardcodes the user preferences
 def start_process():
-    file_path = "../data/goodreads_books_young_adult.json.gz"  # path to the local file
+    file_path = "data/goodreads_books_young_adult.json.gz"  # path to the local file
     books_df = load_books(file_path)
     books_df['popular_shelves'] = books_df['popular_shelves'].apply(filter_shelves) # remove the useless shelf titles that aren't in the acceptable genres
 
     # hardcoded preferences
     user_preferences = {
-        "genre_keyword": "romance",
+        "genre_keyword": "mystery",
         "min_pages": 200,
-        "max_pages": 600,
-        "min_rating": 4.0
+        "max_pages": 1000,
     }
 
     unsorted_books = recommend_books(
@@ -115,7 +120,6 @@ def start_process():
         genre_keyword=user_preferences["genre_keyword"],
         min_pages=user_preferences["min_pages"],
         max_pages=user_preferences["max_pages"],
-        min_rating=user_preferences["min_rating"]
     )
 
 
