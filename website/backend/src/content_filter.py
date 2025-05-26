@@ -104,7 +104,7 @@ def recommend_books(df, genre_keyword, min_pages, max_pages):
 
 # ------------------ START PROCESS: this method loads in the dataset and called recommend_books. it hardcodes the user preferences
 def start_process():
-    file_path = "../data/goodreads_books_young_adult.json.gz"  # path to the local file
+    file_path = "../data/goodreads_valid_books_young_adult.json.gz"  # path to the local file
     books_df = load_books(file_path)
     books_df['popular_shelves'] = books_df['popular_shelves'].apply(filter_shelves) # remove the useless shelf titles that aren't in the acceptable genres
 
