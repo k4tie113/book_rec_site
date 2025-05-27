@@ -67,7 +67,7 @@ function App() {
           backgroundColor: '#86a3c3',
           color: '#333',
         }}>
-          Welcome
+          Welcome To BookRates
         </header>
 
         {/* Navbar */}

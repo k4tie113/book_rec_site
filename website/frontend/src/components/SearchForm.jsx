@@ -35,6 +35,17 @@ const SearchForm = ({ onSearch }) => {
           <option value="selfhelp">Self Help</option>
           <option value="women">Women's Fiction</option>
           <option value="nonfiction">Non-Fiction</option>
+          <option value="young-adult">Young Adult</option>
+          <option value="teen">Teen</option>
+          <option value="realistic-fiction">Realistic Fiction</option>
+          <option value="high-school">High School</option>
+          <option value="coming-of-age">Coming of Age</option>
+          <option value="lgbtq">LGBTQ</option>
+          <option value="futuristic">Futuristic</option>
+          <option value="post-apocalyptic">Post Apocalyptic</option>
+          <option value="mythology">Mythology</option>
+          <option value="vampires">Vampires</option>
+          <option value="survival">Survival</option>
           {/* PLEASE ADD MORE GENRES */}
         </select>
       </div>
