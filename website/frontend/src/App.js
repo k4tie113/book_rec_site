@@ -42,34 +42,38 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
-      <div style={{ fontFamily: 'Georgia', backgroundColor: '#d8e0bb', minHeight: '100vh' }}>
+      <div style={{
+        fontFamily: 'Georgia',
+        backgroundColor: '#fdfaf6', // Updated: soft pastel background
+        minHeight: '100vh',
+      }}>
         {/* Welcome Header */}
         <header style={{
           textAlign: 'center',
           padding: '30px 0 10px 0',
           fontSize: '32px',
           fontWeight: 'bold',
-          backgroundColor: '#86a3c3',
-          color: '#333',
+          backgroundColor: '#d0e8f2', // Updated: soft powder blue
+          color: '#000000',
         }}>
           Welcome To BookRates
         </header>
 
         {/* Navbar */}
-
         <nav style={{
           display: 'flex',
           justifyContent: 'center',
           gap: '40px',
           padding: '20px',
-          backgroundColor: '#b6cec7',
+          backgroundColor: '#c8e7d8', // Updated: pastel mint green
           fontSize: '18px',
-   
         }}>
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
-          <Link to="/learnmore" className="fade-in-link" style={{ textDecoration: 'none', color: 'black',backgroundColor: '#b6cec7' }}>Learn More</Link>
-          <Link to="/contact" className="fade-in-link" style={{ textDecoration: 'none', color: 'black',backgroundColor: '#b6cec7' }}>Contact Us</Link>
+          <Link to="/learnmore" style={{ textDecoration: 'none', color: 'black', backgroundColor: '#b6cec7' }}>Learn More</Link>
+          <Link to="/contact" style={{ textDecoration: 'none', color: 'black', backgroundColor: '#b6cec7' }}>Contact Us</Link>
         </nav>
+
+        {/* Routes */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />

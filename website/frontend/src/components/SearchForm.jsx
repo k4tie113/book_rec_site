@@ -16,63 +16,128 @@ const SearchForm = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginTop: '40px', textAlign: 'center' }}>
-      {/* Genre */}
-      <div style={{ marginBottom: '20px' }}>
-        <label>Genre: </label>
-        <select value={genre} onChange={(e) => setGenre(e.target.value)}>
-          <option value="fantasy">Fantasy</option>
-          <option value="romance">Romance</option>
-          <option value="mystery">Mystery</option>
-          <option value="sci-fi">Sci-Fi</option>
-          <option value="horror">Horror</option>
-          <option value="crime">Crime</option>
-          <option value="adventure">Adventure</option>
-          <option value="dystopian">Dystopian</option>
-          <option value="historical">Historical Fiction</option>
-          <option value="shortstory">Short Story</option>
-          <option value="selfhelp">Self Help</option>
-          <option value="women">Women's Fiction</option>
-          <option value="nonfiction">Non-Fiction</option>
-          <option value="young-adult">Young Adult</option>
-          <option value="teen">Teen</option>
-          <option value="realistic-fiction">Realistic Fiction</option>
-          <option value="high-school">High School</option>
-          <option value="coming-of-age">Coming of Age</option>
-          <option value="lgbtq">LGBTQ</option>
-          <option value="futuristic">Futuristic</option>
-          <option value="post-apocalyptic">Post Apocalyptic</option>
-          <option value="mythology">Mythology</option>
-          <option value="vampires">Vampires</option>
-          <option value="survival">Survival</option>
-          {/* PLEASE ADD MORE GENRES */}
-        </select>
-      </div>
-
-        {/* Page Range */}
-    <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <label style={{ marginRight: '10px', minWidth: '100px' }}>Page Range:</label>
-        <input
-            type="number"
-            value={minPages}
-            onChange={(e) => setMinPages(Number(e.target.value))}
-            placeholder="Min"
-            style={{ width: '80px', marginRight: '10px' }}
-        />
-        <span>to</span>
-        <input
-            type="number"
-            value={maxPages}
-            onChange={(e) => setMaxPages(Number(e.target.value))}
-            placeholder="Max"
-            style={{ width: '80px', marginLeft: '10px' }}
-        />
+    <form
+    onSubmit={handleSubmit}
+    style={{
+      marginTop: '40px',
+      textAlign: 'center',
+      fontFamily: 'Georgia',
+      backgroundColor: '#e6f7f5', // pastel green-blue background
+      padding: '30px',
+      borderRadius: '12px',
+      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+      maxWidth: '600px',
+      margin: '40px auto'
+    }}
+  >
+    {/* Genre */}
+    <div style={{ marginBottom: '25px' }}>
+      <label style={{ fontWeight: 'bold', fontSize: '18px', marginRight: '10px' }}>Genre:</label>
+      <select
+        value={genre}
+        onChange={(e) => setGenre(e.target.value)}
+        style={{
+          padding: '10px',
+          borderRadius: '8px',
+          border: '2px solid #b2dfdb',
+          backgroundColor: '#f0ffff',
+          fontSize: '16px',
+          color: '#00695c',
+          fontFamily: 'Georgia'
+        }}
+      >
+        <option value="fantasy">Fantasy</option>
+        <option value="romance">Romance</option>
+        <option value="mystery">Mystery</option>
+        <option value="sci-fi">Sci-Fi</option>
+        <option value="horror">Horror</option>
+        <option value="crime">Crime</option>
+        <option value="adventure">Adventure</option>
+        <option value="dystopian">Dystopian</option>
+        <option value="historical">Historical Fiction</option>
+        <option value="shortstory">Short Story</option>
+        <option value="selfhelp">Self Help</option>
+        <option value="women">Women's Fiction</option>
+        <option value="nonfiction">Non-Fiction</option>
+        <option value="young-adult">Young Adult</option>
+        <option value="teen">Teen</option>
+        <option value="realistic-fiction">Realistic Fiction</option>
+        <option value="high-school">High School</option>
+        <option value="coming-of-age">Coming of Age</option>
+        <option value="lgbtq">LGBTQ</option>
+        <option value="futuristic">Futuristic</option>
+        <option value="post-apocalyptic">Post Apocalyptic</option>
+        <option value="mythology">Mythology</option>
+        <option value="vampires">Vampires</option>
+        <option value="survival">Survival</option>
+      </select>
     </div>
-
-
-      {/* Submit */}
-      <button type="submit">SEARCH</button>
-    </form>
+  
+    {/* Page Range */}
+    <div style={{ marginBottom: '25px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '18px', minWidth: '120px' }}>
+        Page Range:
+      </label>
+      <input
+        type="number"
+        value={minPages}
+        onChange={(e) => setMinPages(Number(e.target.value))}
+        placeholder="Min"
+        style={{
+          width: '80px',
+          padding: '8px',
+          borderRadius: '8px',
+          border: '2px solid #b2dfdb',
+          backgroundColor: '#f0ffff',
+          color: '#004d40',
+          marginRight: '10px',
+          fontFamily: 'Georgia'
+        }}
+      />
+      <span style={{ color: '#004d40', fontWeight: 'bold' }}>to</span>
+      <input
+        type="number"
+        value={maxPages}
+        onChange={(e) => setMaxPages(Number(e.target.value))}
+        placeholder="Max"
+        style={{
+          width: '80px',
+          padding: '8px',
+          borderRadius: '8px',
+          border: '2px solid #b2dfdb',
+          backgroundColor: '#f0ffff',
+          color: '#004d40',
+          marginLeft: '10px',
+          fontFamily: 'Georgia'
+        }}
+      />
+    </div>
+  
+    {/* Submit Button */}
+    <button
+      type="submit"
+      style={{
+        padding: '12px 30px',
+        fontSize: '16px',
+        fontWeight: 'bold',
+        background: '#80deea',
+        border: 'none',
+        borderRadius: '10px',
+        color: '#004d40',
+        cursor: 'pointer',
+        transition: 'all 0.3s ease'
+      }}
+      onMouseOver={(e) => {
+        e.target.style.background = '#4dd0e1';
+      }}
+      onMouseOut={(e) => {
+        e.target.style.background = '#80deea';
+      }}
+    >
+      SEARCH
+    </button>
+  </form>
+  
   );
 };
 
