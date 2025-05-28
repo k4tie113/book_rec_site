@@ -1,12 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import logo from './images/fake_logo.png';
 import SearchForm from './components/SearchForm';
 import ContactPage from './components/ContactPage';
 import LearnMore from './components/LearnMore';
+import HomepageBanner from './components/HomepageBanner';
 import { motion } from 'framer-motion';
-
 
 function HomePage() {
   return (
@@ -16,15 +15,13 @@ function HomePage() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-   
-      <div style={{ textAlign: 'center', marginTop: '40px', }}>
-        <img src={logo} alt="Book Logo" style={{ height: '200px' }} />
-      </div>
+      {/* Replace the image with the new banner */}
+      <HomepageBanner />
       <SearchForm />
-      </motion.div>
-
+    </motion.div>
   );
 }
+
 function AnimatedRoutes() {
   const location = useLocation();
 
