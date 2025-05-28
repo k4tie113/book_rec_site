@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 
 const SearchForm = ({ onSearch }) => {
   const [genre, setGenre] = useState('fantasy');
-  const [age, setAge] = useState(18);
   const [minPages, setMinPages] = useState(0);
   const [maxPages, setMaxPages] = useState(1000);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const searchData = { genre, age, minPages, maxPages };
+    const searchData = { genre, minPages, maxPages };
     console.log('Search submitted with:', searchData);
 
     if (onSearch) {
@@ -49,20 +48,6 @@ const SearchForm = ({ onSearch }) => {
           {/* PLEASE ADD MORE GENRES */}
         </select>
       </div>
-
-      {/* Age */}
-      <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <label style={{ marginRight: '10px', minWidth: '50px' }}>Age:</label>
-        <input
-            type="number"
-            min="1"
-            max="100"
-            value={age}
-            onChange={(e) => setAge(Number(e.target.value))}
-            style={{ width: '100px' }}
-        />
-    </div>
-
 
         {/* Page Range */}
     <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

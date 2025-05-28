@@ -3,26 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import { AnimatePresence } from 'framer-motion';
 import logo from './images/fake_logo.png';
 import SearchForm from './components/SearchForm';
+import ContactPage from './components/ContactPage';
+import LearnMore from './components/LearnMore';
 import { motion } from 'framer-motion';
 
-
-
-function ContactPage() {
-  return (
-    <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 1.5 }}
-    style={{ textAlign: 'center', padding: '50px'}}
-  >
-    <div style={{ textAlign: 'center', padding: '100px', fontSize: '20px' }}>
-      <h2>Please let us know your feedback!</h2>
-      <p>Let us know if we need to make any improvements with our recommendations! <a href="https://form.typeform.com/to/t9GHM87l">Suggestion Form</a></p>
-    </div>
-    </motion.div>
-  );
-}
 
 function HomePage() {
   return (
@@ -49,6 +33,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/learnmore" element={<LearnMore />} />
       </Routes>
     </AnimatePresence>
   );
@@ -82,11 +67,13 @@ function App() {
    
         }}>
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
+          <Link to="/learnmore" className="fade-in-link" style={{ textDecoration: 'none', color: 'black',backgroundColor: '#b6cec7' }}>Learn More</Link>
           <Link to="/contact" className="fade-in-link" style={{ textDecoration: 'none', color: 'black',backgroundColor: '#b6cec7' }}>Contact Us</Link>
         </nav>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/learnmore" element={<LearnMore />} />
         </Routes>
       </div>
     </Router>
