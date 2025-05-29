@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 const SearchForm = ({ onSearch }) => {
   const [genre, setGenre] = useState('fantasy');
   const [minPages, setMinPages] = useState(0);
@@ -16,13 +15,14 @@ const SearchForm = ({ onSearch }) => {
   };
 
   return (
+    
     <form
     onSubmit={handleSubmit}
     style={{
       marginTop: '40px',
       textAlign: 'center',
       fontFamily: 'Monaco',
-      backgroundColor: '#F0DBC5', // pastel green-blue background
+      backgroundColor: '#d7c0a1', // pastel green-blue background
       padding: '30px',
       borderRadius: '12px',
       boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
@@ -30,6 +30,7 @@ const SearchForm = ({ onSearch }) => {
       margin: '40px auto'
     }}
   >
+
     {/* Genre */}
     <div style={{ marginBottom: '25px' }}>
       <label style={{ fontWeight: 'bold', fontSize: '18px', marginRight: '10px' }}>Genre:</label>
@@ -40,7 +41,7 @@ const SearchForm = ({ onSearch }) => {
           padding: '10px',
           borderRadius: '8px',
           border: '2px solidrgb(255, 255, 255)',
-          backgroundColor: '#f0ffff',
+          backgroundColor: '#ffffff',
           fontSize: '16px',
           color: '#000000',
           fontFamily: 'Monaco'
@@ -88,7 +89,7 @@ const SearchForm = ({ onSearch }) => {
           padding: '8px',
           borderRadius: '8px',
           border: '2px solidrgb(255, 255, 255)',
-          backgroundColor: '#f0ffff',
+          backgroundColor: '#ffffff',
           color: '#004d40',
           marginRight: '10px',
           fontFamily: 'Monaco'
@@ -105,7 +106,7 @@ const SearchForm = ({ onSearch }) => {
           padding: '8px',
           borderRadius: '8px',
           border: '2px solidrgb(255, 255, 255)',
-          backgroundColor: '#f0ffff',
+          backgroundColor: '#ffffff',
           color: '#004d40',
           marginLeft: '10px',
           fontFamily: 'Monaco'
@@ -120,7 +121,7 @@ const SearchForm = ({ onSearch }) => {
         padding: '12px 30px',
         fontSize: '16px',
         fontWeight: 'bold',
-        background: '#ccb79c',
+        background: '#efdbc5',
         border: 'none',
         borderRadius: '10px',
         color: '#000000',
@@ -128,10 +129,10 @@ const SearchForm = ({ onSearch }) => {
         transition: 'all 0.3s ease'
       }}
       onMouseOver={(e) => {
-        e.target.style.background = '#ccb79c';
+        e.target.style.background = '#ffffff';
       }}
       onMouseOut={(e) => {
-        e.target.style.background = '#F0DBC5';
+        e.target.style.background = '#efdbc5';
       }}
     >
       SEARCH

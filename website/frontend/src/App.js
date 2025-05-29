@@ -6,7 +6,7 @@ import ContactPage from './components/ContactPage';
 import LearnMore from './components/LearnMore';
 import HomepageBanner from './components/HomepageBanner';
 import { motion } from 'framer-motion';
-
+import DividerLogo from './components/DividerLogo'; // Adjust path if needed
 function HomePage() {
   return (
     <motion.div
@@ -17,6 +17,7 @@ function HomePage() {
     >
       {/* Replace the image with the new banner */}
       <HomepageBanner />
+      <DividerLogo />
       <SearchForm />
     </motion.div>
   );
@@ -41,33 +42,21 @@ function App() {
     <Router>
       <div style={{
         fontFamily: 'Monaco',
-        backgroundColor: '#d7c0a2', // Updated: soft brown background
+        backgroundColor: '#efdbc5', // Updated: soft brown background
         minHeight: '100vh',
       }}>
-        {/* Welcome Header */}
-        <header style={{
-          textAlign: 'center',
-          padding: '30px 0 10px 0',
-          fontSize: '32px',
-          fontWeight: 'bold',
-          backgroundColor: '#cab69e', // Updated: soft powder brown
-          color: '#000000',
-        }}>
-          Welcome To BookRates!
-        </header>
-
         {/* Navbar */}
         <nav style={{
           display: 'flex',
           justifyContent: 'center',
           gap: '40px',
           padding: '20px',
-          backgroundColor: '#AC9D8E', // Updated
+          backgroundColor: '#efdbc5', // Updated
           fontSize: '18px',
         }}>
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
-          <Link to="/learnmore" style={{ textDecoration: 'none', color: 'black', backgroundColor: '#b6cec7' }}>Learn More</Link>
-          <Link to="/contact" style={{ textDecoration: 'none', color: 'black', backgroundColor: '#b6cec7' }}>Contact Us</Link>
+          <Link to="/learnmore" style={{ textDecoration: 'none', color: 'black' }}>Learn More</Link>
+          <Link to="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact Us</Link>
         </nav>
 
         {/* Routes */}
