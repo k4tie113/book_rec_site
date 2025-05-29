@@ -40,8 +40,8 @@ function App() {
   return (
     <Router>
       <div style={{
-        fontFamily: 'Georgia',
-        backgroundColor: '#fdfaf6', // Updated: soft pastel background
+        fontFamily: 'Monaco',
+        backgroundColor: '#d7c0a2', // Updated: soft brown background
         minHeight: '100vh',
       }}>
         {/* Welcome Header */}
@@ -50,10 +50,10 @@ function App() {
           padding: '30px 0 10px 0',
           fontSize: '32px',
           fontWeight: 'bold',
-          backgroundColor: '#d0e8f2', // Updated: soft powder blue
+          backgroundColor: '#cab69e', // Updated: soft powder brown
           color: '#000000',
         }}>
-          Welcome To BookRates
+          Welcome To BookRates!
         </header>
 
         {/* Navbar */}
@@ -62,7 +62,7 @@ function App() {
           justifyContent: 'center',
           gap: '40px',
           padding: '20px',
-          backgroundColor: '#c8e7d8', // Updated: pastel mint green
+          backgroundColor: '#AC9D8E', // Updated
           fontSize: '18px',
         }}>
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
