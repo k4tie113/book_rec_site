@@ -42,7 +42,7 @@ function App() {
     <Router>
       <div style={{
         fontFamily: 'Monaco',
-        backgroundColor: '#efdbc5', // Updated: soft brown background
+        backgroundColor: '#1e140a', // adding dark brown background color
         minHeight: '100vh',
       }}>
         {/* Navbar */}
@@ -51,12 +51,12 @@ function App() {
           justifyContent: 'center',
           gap: '40px',
           padding: '20px',
-          backgroundColor: '#efdbc5', // Updated
+          backgroundColor: '#1e140a', // Updated
           fontSize: '18px',
         }}>
-          <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
-          <Link to="/learnmore" style={{ textDecoration: 'none', color: 'black' }}>Learn More</Link>
-          <Link to="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact Us</Link>
+          <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
+          <Link to="/learnmore" style={{ textDecoration: 'none', color: 'white' }}>Learn More</Link>
+          <Link to="/contact" style={{ textDecoration: 'none', color: 'white' }}>Contact Us</Link>
         </nav>
 
         {/* Routes */}
