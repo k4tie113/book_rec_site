@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 const SearchForm = ({ onSearch }) => {
   const [genre, setGenre] = useState('fantasy');
   const [minPages, setMinPages] = useState(0);
@@ -16,20 +15,22 @@ const SearchForm = ({ onSearch }) => {
   };
 
   return (
+    
     <form
     onSubmit={handleSubmit}
     style={{
       marginTop: '40px',
       textAlign: 'center',
-      fontFamily: 'Georgia',
-      backgroundColor: '#e6f7f5', // pastel green-blue background
+      fontFamily: 'Monaco',
+      backgroundColor: '#d7c0a1', // pastel green-blue background
       padding: '30px',
       borderRadius: '12px',
-      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+      boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
       maxWidth: '600px',
       margin: '40px auto'
     }}
   >
+
     {/* Genre */}
     <div style={{ marginBottom: '25px' }}>
       <label style={{ fontWeight: 'bold', fontSize: '18px', marginRight: '10px' }}>Genre:</label>
@@ -39,11 +40,11 @@ const SearchForm = ({ onSearch }) => {
         style={{
           padding: '10px',
           borderRadius: '8px',
-          border: '2px solid #b2dfdb',
-          backgroundColor: '#f0ffff',
+          border: '2px solidrgb(255, 255, 255)',
+          backgroundColor: '#ffffff',
           fontSize: '16px',
-          color: '#00695c',
-          fontFamily: 'Georgia'
+          color: '#000000',
+          fontFamily: 'Monaco'
         }}
       >
         <option value="fantasy">Fantasy</option>
@@ -87,11 +88,11 @@ const SearchForm = ({ onSearch }) => {
           width: '80px',
           padding: '8px',
           borderRadius: '8px',
-          border: '2px solid #b2dfdb',
-          backgroundColor: '#f0ffff',
+          border: '2px solidrgb(255, 255, 255)',
+          backgroundColor: '#ffffff',
           color: '#004d40',
           marginRight: '10px',
-          fontFamily: 'Georgia'
+          fontFamily: 'Monaco'
         }}
       />
       <span style={{ color: '#004d40', fontWeight: 'bold' }}>to</span>
@@ -104,11 +105,11 @@ const SearchForm = ({ onSearch }) => {
           width: '80px',
           padding: '8px',
           borderRadius: '8px',
-          border: '2px solid #b2dfdb',
-          backgroundColor: '#f0ffff',
+          border: '2px solidrgb(255, 255, 255)',
+          backgroundColor: '#ffffff',
           color: '#004d40',
           marginLeft: '10px',
-          fontFamily: 'Georgia'
+          fontFamily: 'Monaco'
         }}
       />
     </div>
@@ -120,18 +121,18 @@ const SearchForm = ({ onSearch }) => {
         padding: '12px 30px',
         fontSize: '16px',
         fontWeight: 'bold',
-        background: '#80deea',
+        background: '#efdbc5',
         border: 'none',
         borderRadius: '10px',
-        color: '#004d40',
+        color: '#000000',
         cursor: 'pointer',
         transition: 'all 0.3s ease'
       }}
       onMouseOver={(e) => {
-        e.target.style.background = '#4dd0e1';
+        e.target.style.background = '#ffffff';
       }}
       onMouseOut={(e) => {
-        e.target.style.background = '#80deea';
+        e.target.style.background = '#efdbc5';
       }}
     >
       SEARCH
