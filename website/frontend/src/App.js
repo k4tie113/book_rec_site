@@ -17,7 +17,6 @@ function HomePage() {
     >
       {/* Replace the image with the new banner */}
       <HomepageBanner />
-      <DividerLogo />
       <SearchForm />
     </motion.div>
   );
@@ -46,14 +45,21 @@ function App() {
         minHeight: '100vh',
       }}>
         {/* Navbar */}
-        <nav style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '40px',
-          padding: '20px',
-          backgroundColor: '#1e140a', // Updated
-          fontSize: '18px',
-        }}>
+        <nav
+          style={{
+            position: 'fixed',       // <-- make it sticky
+            top: 0,                  // <-- stick to the top
+            width: '100%',          // <-- stretch across the top
+            zIndex: 1000,           // <-- sit above other content
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '40px',
+            padding: '20px',
+            backgroundColor: '#1e140a',
+            fontSize: '18px',
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // optional: adds slight shadow
+          }}
+        >
           <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
           <Link to="/learnmore" style={{ textDecoration: 'none', color: 'white' }}>Learn More</Link>
           <Link to="/contact" style={{ textDecoration: 'none', color: 'white' }}>Contact Us</Link>

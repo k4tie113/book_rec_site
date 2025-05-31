@@ -13,7 +13,7 @@ const DividerLogo = () => {
       <div style={{
         flex: 1,
         height: '6px',
-        backgroundImage: 'linear-gradient(#635d7c 33%, transparent 33%, transparent 66%, #635d7c 66%)',
+        backgroundImage: 'linear-gradient(#ffffff 33%, transparent 33%, transparent 66%, #ffffff 66%)',
         backgroundSize: '100% 100%',
         margin: '0 20px'
       }} />
@@ -21,7 +21,7 @@ const DividerLogo = () => {
       <div style={{
         flex: 1,
         height: '6px',
-        backgroundImage: 'linear-gradient(#635d7c 33%, transparent 33%, transparent 66%, #635d7c 66%)',
+        backgroundImage: 'linear-gradient(#ffffff 33%, transparent 33%, transparent 66%, #ffffff 66%)',
         backgroundSize: '100% 100%',
         margin: '0 20px'
       }} />
