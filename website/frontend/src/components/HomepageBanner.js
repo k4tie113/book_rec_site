@@ -56,6 +56,7 @@ function HomepageBanner() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',

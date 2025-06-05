@@ -29,7 +29,7 @@ def recommend_books(df, genre_keyword, min_pages, max_pages):
     df['ratings_count'] = pd.to_numeric(df['ratings_count'], errors='coerce')
 
     df = df[
-        (df['ratings_count'] > 500) &
+        (df['ratings_count'] > 1000) &
         (df['popular_shelves'].apply(lambda s: any(int(s['count']) >= 500 for s in s if 'count' in s))) &
         (df['language_code'].isin(['eng', 'en-US', 'en-GB', 'english']))
     ]

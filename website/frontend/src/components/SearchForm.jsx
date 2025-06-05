@@ -114,29 +114,7 @@ const SearchForm = ({ onSearch }) => {
       />
     </div>
   
-    {/* Submit Button */}
-    <button
-      type="submit"
-      style={{
-        padding: '12px 30px',
-        fontSize: '16px',
-        fontWeight: 'bold',
-        background: '#efdbc5',
-        border: 'none',
-        borderRadius: '10px',
-        color: '#000000',
-        cursor: 'pointer',
-        transition: 'all 0.3s ease'
-      }}
-      onMouseOver={(e) => {
-        e.target.style.background = '#ffffff';
-      }}
-      onMouseOut={(e) => {
-        e.target.style.background = '#efdbc5';
-      }}
-    >
-      SEARCH
-    </button>
+
   </form>
   
   );

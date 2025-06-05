@@ -6,7 +6,8 @@ import ContactPage from './components/ContactPage';
 import LearnMore from './components/LearnMore';
 import HomepageBanner from './components/HomepageBanner';
 import { motion } from 'framer-motion';
-import DividerLogo from './components/DividerLogo'; // Adjust path if needed
+import BookList from './components/BookList';
+
 function HomePage() {
   return (
     <motion.div
@@ -18,6 +19,7 @@ function HomePage() {
       {/* Replace the image with the new banner */}
       <HomepageBanner />
       <SearchForm />
+      <BookList />
     </motion.div>
   );
 }
