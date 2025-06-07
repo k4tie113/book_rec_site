@@ -3,12 +3,19 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import { AnimatePresence } from 'framer-motion';
 import SearchForm from './components/SearchForm';
 import ContactPage from './components/ContactPage';
+import Recommendations from './components/Recommendations';
 import LearnMore from './components/LearnMore';
 import HomepageBanner from './components/HomepageBanner';
 import { motion } from 'framer-motion';
 import BookList from './components/BookList';
+import SearchButton from './components/SearchButton';
+import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
+  const navigate = useNavigate();
+  const handleSearch = () => {
+    navigate('/recommendations');
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -20,6 +27,7 @@ function HomePage() {
       <HomepageBanner />
       <SearchForm />
       <BookList />
+      <SearchButton onClick={handleSearch} />
     </motion.div>
   );
 }
@@ -73,6 +81,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/learnmore" element={<LearnMore />} />
+          <Route path="/recommendations" element={<Recommendations />} />
         </Routes>
       </div>
     </Router>
