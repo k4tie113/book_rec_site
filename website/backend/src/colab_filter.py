@@ -9,7 +9,8 @@ import time                # for performance benchmarking
 
 # === STEP 1: Load interaction data with rating > 0 ===
 def load_valid_interactions(file_path, max_records=1_000_000):
-    cache_path = "../cache/interactions_cleaned.parquet"  # local cache to avoid repeated parsing
+    cache_path = "../backend/cache/user_scores.parquet"
+    os.makedirs(os.path.dirname(cache_path), exist_ok=True)
 
     # If the cleaned parquet version already exists, load from cache
     if os.path.exists(cache_path):
@@ -19,17 +20,17 @@ def load_valid_interactions(file_path, max_records=1_000_000):
     interactions = []
     with gzip.open(file_path, 'rt', encoding='utf-8') as f:
         for i, line in enumerate(f):
-            if i >= max_records:  # stop early if exceeding max allowed
+            if i >= max_records:
                 break
             record = json.loads(line)
-            if record.get("rating", 0) > 0:  # only keep rated interactions
+            if record.get("rating", 0) > 0:
                 interactions.append(record)
 
     # Convert to DataFrame and save to disk for future runs
     df = pd.DataFrame(interactions)
-    os.makedirs("cache", exist_ok=True)
-    df.to_parquet(cache_path)
+    df.to_parquet(cache_path)  # ✅ moved this AFTER df is defined
     return df
+
 
 # === STEP 2: Compute collaborative filtering scores for a synthetic user ===
 def compute_collab_scores(user_feedback, books_df, interactions_path="../data/goodreads_valid_interactions_young_adult.json.gz"):
