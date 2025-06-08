@@ -54,4 +54,7 @@ def recommend_books(df, genre_keyword, min_pages, max_pages):
         w3 * np.log1p(filtered['genre_shelf_count'])
     )
     print(f"[TIMING] content filter took {time.time() - start:.2f} seconds")
-    return filtered[['book_id', 'title', 'score']]
+    print("[DEBUG] Final returned columns from content filter:", filtered.columns.tolist())
+
+    return filtered[['book_id', 'title', 'score', 'description', 'image_url']]
+

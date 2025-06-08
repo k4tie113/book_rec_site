@@ -40,7 +40,7 @@ def recommend_endpoint():
         collab_scored = pd.DataFrame(columns=['book_id', 'collab_score'])
 
     final_df = combine_scores(content_scored, collab_scored, alpha=1.0)
-    result = final_df[['title', 'final_score']].head(10).to_dict(orient='records')
+    result = final_df[['title', 'description', 'image_url']].head(10).to_dict(orient='records')
 
     return jsonify(result)
 

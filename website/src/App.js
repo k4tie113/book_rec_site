@@ -31,7 +31,7 @@ function HomePage() {
         liked: b.liked === "liked"
       }))
     };
-
+  
     fetch("http://127.0.0.1:5000/api/recommend", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -39,14 +39,11 @@ function HomePage() {
     })
       .then(res => res.json())
       .then(data => {
-        alert("📚 Recommendations received!");  // Temp: Replace with navigation + state later
-        console.log(data);
+        navigate("/recommendations", { state: { recommendations: data } });
       })
-      .catch(err => {
-        console.error("❌ API call failed:", err);
-        alert("❌ API call failed");
-      });
+      .catch(err => alert("❌ API call failed"));
   };
+  
 
   
   return (

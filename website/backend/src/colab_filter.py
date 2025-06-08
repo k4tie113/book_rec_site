@@ -33,7 +33,7 @@ def load_valid_interactions(file_path, max_records=1_000_000):
 
 
 # === STEP 2: Compute collaborative filtering scores for a synthetic user ===
-def compute_collab_scores(user_feedback, books_df, interactions_path="../data/goodreads_valid_interactions_young_adult.json.gz"):
+def compute_collab_scores(user_feedback, books_df, interactions_path="../../data/goodreads_valid_interactions_young_adult.json.gz"):
     start = time.time()
 
     # Load preprocessed user-book interaction dataset
