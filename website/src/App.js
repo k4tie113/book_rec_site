@@ -65,6 +65,7 @@ function HomePage() {
       />
       <BookList books={userBooks} setBooks={setUserBooks} />
       <SearchButton onClick={handleSearch} />
+      <div style={{ paddingTop: '80px' }}></div>
     </motion.div>
   );
 }
@@ -112,7 +113,6 @@ function App() {
           <Link to="/contact" style={{ textDecoration: 'none', color: 'white' }}>Contact Us</Link>
         </nav>
         {/* pushes the content down */}
-        <div style={{ paddingTop: '80px' }}></div>
         {/* Routes */}
         <Routes>
           <Route path="/" element={<HomePage />} />
