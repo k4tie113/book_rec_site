@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import BookList from './components/BookList';
 import SearchButton from './components/SearchButton';
 import { useNavigate } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 
 function HomePage() {
 
@@ -114,6 +115,7 @@ function App() {
         </nav>
         {/* pushes the content down */}
         {/* Routes */}
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />

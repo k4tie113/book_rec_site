@@ -1,3 +1,4 @@
+//contact page
 import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
 import { useRef } from 'react';

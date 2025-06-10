@@ -1,3 +1,4 @@
+//ignore (probably won't use it)
 import React from 'react';
 import dividerLogo from '../images/logo.png';
 

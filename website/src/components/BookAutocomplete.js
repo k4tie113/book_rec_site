@@ -1,7 +1,7 @@
 import React from 'react';
 import WindowedSelect from 'react-windowed-select';
 
-// Filter: only show titles that START with input (case-insensitive)
+// only show titles that START with input (case insensitive)
 const startsWithFilter = (option, input) => {
   if (!input) return true;
   return option.label.toLowerCase().startsWith(input.toLowerCase());
