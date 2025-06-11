@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import dividerLogo from '../images/logo.png'
 import '../App.css';
 
 function LearnMore() {
@@ -28,17 +29,21 @@ function LearnMore() {
           textAlign: 'left',
           fontFamily: 'Monaco'
         }}>
-          <h2 style={{ fontSize: '32px', marginBottom: '30px' }}>Our Algorithm</h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
+            <h2 style={{ fontSize: '32px', margin: 0 }}>Our Algorithm</h2>
+            <img src={dividerLogo} alt="Divider Logo" style={{ height: '40px' }} />
+          </div>
 
-          <p>We built our system using a combination of two existing recommendation strategies: content-based filtering and collaborative filtering. These methods work together to help you discover books that match both your preferences and your past reading experiences.</p>
 
-          <p><strong>Content Based Filtering</strong><br />Each book is evaluated based on attributes such as genre (shelf tags), number of pages, average rating, and ratings volume. We assign a weighted score to every candidate book based on how well it matches the user’s specified preferences. To ensure genre relevance, the requested genre must appear in the book’s top shelves with a minimum frequency threshold.</p>
+          <p style = {{color: '#d3d3d3'}}>We built our system using a combination of two existing recommendation strategies: content-based filtering and collaborative filtering. These methods work together to help you discover books that match both your preferences and your past reading experiences.</p>
+          <p><strong>Content Based Filtering</strong></p>
+          <p style = {{color: '#d3d3d3'}}>Each book is evaluated based on attributes such as genre (shelf tags), number of pages, average rating, and ratings volume. We assign a weighted score to every candidate book based on how well it matches the user’s specified preferences. To ensure genre relevance, the requested genre must appear in the book’s top shelves with a minimum frequency threshold.</p>
 
-          <p><strong>Collaborative Filtering</strong><br />When the user provides feedback on books they've liked or disliked, we apply a latent factor model using Singular Value Decomposition (SVD). We construct a sparse matrix of user-book ratings from the Goodreads dataset and add an extra row for the user representing their likes/dislikes (e.g. we assume rating = 5 for liked books, 1 for disliked). SVD factorizes this matrix into lower-dimensional representations that capture hidden relationships between users and books. The reconstructed matrix tells us the user's predicted ratings, and are considered in a book's hybrid score.</p>
+          <p><strong>Collaborative Filtering</strong><br /> <p style = {{color: '#d3d3d3'}}>When the user provides feedback on books they've liked or disliked, we apply a latent factor model using Singular Value Decomposition (SVD). We construct a sparse matrix of user-book ratings from the Goodreads dataset and add an extra row for the user representing their likes/dislikes (e.g. we assume rating = 5 for liked books, 1 for disliked). SVD factorizes this matrix into lower-dimensional representations that capture hidden relationships between users and books. The reconstructed matrix tells us the user's predicted ratings, and are considered in a book's hybrid score.</p></p>
 
-          <p>We combine both content scores and collaborative scores (if feedback is provided) to produce a ranked list of books tailored just for you.</p>
+          <p style = {{color: '#d3d3d3'}}>We combine both content scores and collaborative scores (if feedback is provided) to produce a ranked list of books tailored just for you.</p>
 
-          <p><strong>Data source: </strong><br />All recommendations are powered by the <em>Goodreads Young Adult Books and Interactions Dataset</em>, consisting of over 93,000 books and 30+ million reader interactions, including detailed review and rating information.</p>
+          <p><strong>Data Source </strong><br/><p style = {{color: '#d3d3d3'}}>All recommendations are powered by the <em>Goodreads Young Adult Books and Interactions Dataset</em>, consisting of over 93,000 books and 30+ million reader interactions, including detailed review and rating information.</p></p>
         </div>
       </motion.div>
 
@@ -56,7 +61,8 @@ function LearnMore() {
     maxWidth: '1000px',
     textAlign: 'left',
     fontSize: '14px',
-    lineHeight: '1.6'
+    lineHeight: '1.6',
+    color: '#d3d3d3'
   }}>
     <h3 style={{ fontSize: '20px', marginBottom: '10px' }}>Citations</h3>
     <ul style={{ paddingLeft: '20px' }}>

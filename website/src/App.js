@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 import BookList from './components/BookList';
 import SearchButton from './components/SearchButton';
 import { useNavigate } from 'react-router-dom';
+import DividerLogo from './components/DividerLogo';
 import ScrollToTop from './components/ScrollToTop';
 
 function HomePage() {
@@ -56,6 +57,7 @@ function HomePage() {
     >
       {/* Replace the image with the new banner */}
       <HomepageBanner />
+      <DividerLogo />
       <SearchForm
       genre={selectedGenre}
       setGenre={setSelectedGenre}

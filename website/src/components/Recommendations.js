@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import backgroundImage from '../images/bookrates.png';
-
+import dividerLogo from '../images/logo.png'
 const Recommendations = () => {
   const location = useLocation();
   const recs = location.state?.recommendations?.slice(0, 5) || [];
@@ -20,9 +20,20 @@ const Recommendations = () => {
         color: '#fff',
       }}
     >
-      <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>
-        Your Top Recommendations
-      </h1>
+      <div style={{
+    padding: '30px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '20px', // spacing between logo and text
+    marginBottom: '20px'
+}}>
+  <img src={dividerLogo} alt="Left Divider" style={{ height: '30px' }} />
+  <h1 style={{ margin: 0, textAlign: 'center' }}>
+    Your Top Recommendations
+  </h1>
+  <img src={dividerLogo} alt="Right Divider" style={{ height: '30px' }} />
+</div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
         {recs.map((book, idx) => {

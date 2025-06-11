@@ -1,6 +1,5 @@
 //ignore (probably won't use it)
 import React from 'react';
-import dividerLogo from '../images/logo.png';
 
 const DividerLogo = () => {
   return (
@@ -14,17 +13,20 @@ const DividerLogo = () => {
       <div style={{
         flex: 1,
         height: '6px',
-        backgroundImage: 'linear-gradient(#ffffff 33%, transparent 33%, transparent 66%, #ffffff 66%)',
+        backgroundImage: 'linear-gradient(#ffffff 20%, transparent 20%, transparent 66%, #ffffff 20%)',
         backgroundSize: '100% 100%',
-        margin: '0 20px'
+        margin: '0 30px'
       }} />
-      <img src={dividerLogo} alt="Divider Logo" style={{ height: '40px' }} />
+      <h1 style={{ color: 'white', fontFamily: '"Fira Code", monospace' }}>
+      Complete the Form Below
+      </h1>
+
       <div style={{
         flex: 1,
         height: '6px',
-        backgroundImage: 'linear-gradient(#ffffff 33%, transparent 33%, transparent 66%, #ffffff 66%)',
+        backgroundImage: 'linear-gradient(#ffffff 20%, transparent 20%, transparent 66%, #ffffff 20%)',
         backgroundSize: '100% 100%',
-        margin: '0 20px'
+        margin: '0 30px'
       }} />
     </div>
   );
