@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+
 .App {
   text-align: center;
 }
@@ -70,9 +73,25 @@ html, body {
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 100%;
-  background-color: #000; /* or your base bg */
+  background-color: #000; /* base bg */
 }
 
 body {
-  overscroll-behavior-y: none; /* Prevents bounce scrolling on some browsers */
+  overscroll-behavior-y: contain; /* Prevents bounce scrolling on some browsers */
+}
+
+/* spinning stuff */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #999;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

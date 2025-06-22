@@ -7,17 +7,17 @@ const SearchForm = ({ genre, setGenre, minPage, setMinPage, maxPage, setMaxPage 
         marginTop: '40px',
         textAlign: 'center',
         fontFamily: 'Monaco',
-        backgroundColor: '#d7c0a1',
+        backgroundColor: '#ab938c',
         padding: '30px',
         borderRadius: '12px',
         boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
         maxWidth: '600px',
-        margin: '40px auto'
+        margin: '40px auto',
       }}
     >
       {/* Genre */}
       <div style={{ marginBottom: '25px' }}>
-        <label style={{ fontWeight: 'bold', fontSize: '18px', marginRight: '10px' }}>Genre:</label>
+        <label style={{ fontWeight: 'bold', marginRight: '10px', fontFamily: 'Tangerine, cursive', fontSize: '40px'}}>Genre:</label>
         <select
           value={genre}
           onChange={(e) => setGenre(e.target.value)}
@@ -33,35 +33,41 @@ const SearchForm = ({ genre, setGenre, minPage, setMinPage, maxPage, setMaxPage 
         >
           <option value="fantasy">Fantasy</option>
           <option value="romance">Romance</option>
+          <option value="drama">Drama</option>
+          <option value="thriller">Thriller</option>
           <option value="mystery">Mystery</option>
           <option value="sci-fi">Sci-Fi</option>
+          <option value="dystopian">Dystopian</option>
+          <option value="supernatural">Supernatural</option>
+          <option value="survival">Survival</option>
+          <option value="vampires">Vampires</option>
           <option value="horror">Horror</option>
+          <option value="mythology">Mythology</option>
           <option value="crime">Crime</option>
           <option value="adventure">Adventure</option>
-          <option value="dystopian">Dystopian</option>
-          <option value="historical">Historical Fiction</option>
-          <option value="shortstory">Short Story</option>
-          <option value="selfhelp">Self Help</option>
-          <option value="women">Women's Fiction</option>
-          <option value="nonfiction">Non-Fiction</option>
+          <option value="action">Action</option>
+          <option value="family">Family</option>
+          <option value="contemporary">Contemporary</option>
+          <option value="non-fiction">Non-Fiction</option>
           <option value="young-adult">Young Adult</option>
           <option value="teen">Teen</option>
+          <option value="magic">Magic</option>
           <option value="realistic-fiction">Realistic Fiction</option>
           <option value="high-school">High School</option>
           <option value="coming-of-age">Coming of Age</option>
           <option value="lgbtq">LGBTQ</option>
-          <option value="futuristic">Futuristic</option>
           <option value="post-apocalyptic">Post Apocalyptic</option>
-          <option value="mythology">Mythology</option>
-          <option value="vampires">Vampires</option>
-          <option value="survival">Survival</option>
+          <option value="historical-fiction">Historical Fiction</option>
+          <option value="short-story">Short Story</option>
+          <option value="childhood-books">Childhood Books</option>
+          <option value="suspense">Suspense</option>
         </select>
       </div>
 
       {/* Page Range */}
       <div style={{ marginBottom: '25px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '18px', minWidth: '120px' }}>
-          Page Range:
+        <label style={{ marginRight: '10px', fontWeight: 'bold', minWidth: '120px', fontFamily: 'Tangerine, cursive', fontSize: '40px' }}>
+          Pages:
         </label>
         <input
           type="number"
@@ -79,7 +85,7 @@ const SearchForm = ({ genre, setGenre, minPage, setMinPage, maxPage, setMaxPage 
             fontFamily: 'Monaco'
           }}
         />
-        <span style={{ color: '#004d40', fontWeight: 'bold' }}>to</span>
+        <span style={{ color: 'black', fontWeight: 'bold', fontFamily: 'Tangerine, cursive', fontSize: '40px'}}> to </span>
         <input
           type="number"
           value={maxPage}

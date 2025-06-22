@@ -76,14 +76,24 @@ function HomepageBanner() {
         <header>
           <div className="double-line">
             <div className="line" />
-            <h2 style={{ fontFamily: '"Fira Code", monospace' }}>BOOKRATES</h2>
+            <h2
+            style={{
+            fontFamily: 'Tangerine, cursive',
+            fontSize: '50px',
+            margin: '20px 0',
+            letterSpacing: '2px',      
+            padding: '0'
+              }}
+            >
+              Bookrates
+          </h2>
             <div className="line" />
           </div>
         </header>
 
         <p style={{ fontFamily: '"Fira Code", monospace', fontSize: '18px' }}>
           <Typewriter
-            words={['Enter your preferences for a book recommendation.']}
+            words={['Scroll down for book recommendations!']}
             loop={1}
             cursor
             typeSpeed={50}

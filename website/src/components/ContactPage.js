@@ -25,8 +25,9 @@ function ContactPage() {
       style={{ textAlign: 'center', padding: '70px' }}
     >
       <div style={{ maxWidth: '600px', margin: '0 auto', fontSize: '18px', color: '#FFFFFF' }}>
-        <h2 style={{ fontSize: '32px', marginBottom: '20px', color: 'FFFFFFF' }}>Let us know your feedback!</h2>
-        <p style={{ marginBottom: '40px' }}>We are happy to hear any suggestions.</p>
+        <h2 style={{ fontSize: '32px', marginBottom: '20px', color: 'FFFFFFF', fontFamily: 'Tangerine, cursive',
+            fontSize: '70px', letterSpacing: '2px'}}>Let us know your feedback!</h2>
+        <p style={{ marginBottom: '40px' }}>We are happy to hear suggestions.</p>
 
         <form ref={formRef} onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           <div style={{ display: 'flex', gap: '20px' }}>

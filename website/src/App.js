@@ -12,6 +12,7 @@ import SearchButton from './components/SearchButton';
 import { useNavigate } from 'react-router-dom';
 import DividerLogo from './components/DividerLogo';
 import ScrollToTop from './components/ScrollToTop';
+import grainyBackground from './images/bg.png';
 
 function HomePage() {
 
@@ -22,8 +23,10 @@ function HomePage() {
   const [minPage, setMinPage] = React.useState(0);
   const [maxPage, setMaxPage] = React.useState(1000);
   const [userBooks, setUserBooks] = React.useState([{ title: null, liked: null }]);
+  const [loading, setLoading] = React.useState(false);
 
   const handleSearch = () => {
+    setLoading(true);
     const payload = {
       genre: selectedGenre,
       min_pages: minPage,
@@ -43,7 +46,8 @@ function HomePage() {
       .then(data => {
         navigate("/recommendations", { state: { recommendations: data } });
       })
-      .catch(err => alert("❌ API call failed"));
+      .catch(err => alert("Sorry, something went wrong."))
+      .finally(() => setLoading(false)); // Stop loading
   };
   
 
@@ -67,7 +71,11 @@ function HomePage() {
       setMaxPage={setMaxPage}
       />
       <BookList books={userBooks} setBooks={setUserBooks} />
-      <SearchButton onClick={handleSearch} />
+      {loading ? (
+        <div className="loader" style = {{marginTop: '30px'}}/>
+          ) : (
+        <SearchButton onClick={handleSearch} />
+        )}
       <div style={{ paddingTop: '80px' }}></div>
     </motion.div>
   );
@@ -93,29 +101,32 @@ function App() {
       <div style={{
         fontFamily: 'Monaco',
         backgroundColor: '#1e140a', // adding dark brown background color
+        backgroundImage: `url(${grainyBackground})`, // Use the imported image
+        backgroundRepeat: 'repeat', // Makes the grainy texture repeat
+        backgroundSize: 'auto', // Or 'cover'/'contain' if bg.png is a large image
         minHeight: '100vh',
       }}>
         {/* Navbar */}
         <nav
           style={{
-            position: 'fixed',       // <-- make it sticky
-            top: 0,                  // <-- stick to the top
-            width: '100%',          // <-- stretch across the top
-            zIndex: 1000,           // <-- sit above other content
+            position: 'fixed',       // make it sticky
+            top: 0,                  // stick to the top
+            width: '100%',          // stretch across the top
+            zIndex: 1000,           // sit above other content
             display: 'flex',
             justifyContent: 'center',
             gap: '40px',
             padding: '20px',
             backgroundColor: '#1e140a',
             fontSize: '18px',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // optional: adds slight shadow
+            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // adds slight shadow
           }}
         >
-          <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
-          <Link to="/learnmore" style={{ textDecoration: 'none', color: 'white' }}>Learn More</Link>
-          <Link to="/contact" style={{ textDecoration: 'none', color: 'white' }}>Contact Us</Link>
+          <Link to="/" style={{ textDecoration: 'none', color: 'white', fontFamily: '"Fira Code", monospace' }}>Home</Link>
+          <Link to="/learnmore" style={{ textDecoration: 'none', color: 'white', fontFamily: '"Fira Code", monospace' }}>Learn More</Link>
+          <Link to="/contact" style={{ textDecoration: 'none', color: 'white', fontFamily: '"Fira Code", monospace' }}>Contact Us</Link>
         </nav>
-        {/* pushes the content down */}
+
         {/* Routes */}
         <ScrollToTop />
         <Routes>

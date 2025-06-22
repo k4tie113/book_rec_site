@@ -6,7 +6,7 @@ const SearchButton = ({ onClick }) => {
       <button
         onClick={onClick}
         style={{
-          backgroundColor: '#d9c1a4',
+          backgroundColor: '#ab938c',
           color: 'black',
           border: 'none',
           padding: '12px 30px',
@@ -17,7 +17,7 @@ const SearchButton = ({ onClick }) => {
           transition: 'background-color 0.3s',
         }}
         onMouseOver={(e) => e.target.style.backgroundColor = 'white'}
-        onMouseOut={(e) => e.target.style.backgroundColor = '#d9c1a4'}
+        onMouseOut={(e) => e.target.style.backgroundColor = '#ab938c'}
       >
         SEARCH
       </button>

@@ -33,13 +33,15 @@ const BookList = ({ books, setBooks }) => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
       <div style={{
-        backgroundColor: '#d9c1a4',
+        backgroundColor: '#ab938c',
         padding: '30px',
         borderRadius: '20px',
         boxShadow: '0 0 15px rgba(0, 0, 0, 0.4)',
-        minWidth: '600px'
+        maxWidth: '600px'
       }}>
-        <h2 style={{ textAlign: 'center' }}>Add Books You've Read</h2>
+        <h2 style={{ textAlign: 'center', fontFamily: 'Tangerine, cursive', fontSize: '40px' }}>Add Books You've Read</h2>
+        <p style = {{ textAlign: 'center', fontFamily: '"Fira Code", monospace', color: 'black', marginLeft: '5%', marginRight: '5%'}}>Share your past reads to help us refine your recommendations! </p>
+        <p style = {{ textAlign: 'center', fontFamily: '"Fira Code", monospace', color: 'black', marginLeft: '5%', marginRight: '5%'}}>(Our collection is continuously expanding – if you don't see a title you're looking for, check back soon)</p>
         {books.map((book, index) => (
           <div key={index} style={{ marginBottom: '15px' }}>
             <BookAutocomplete
@@ -55,7 +57,7 @@ const BookList = ({ books, setBooks }) => {
                   checked={book.liked === 'liked'}
                   onChange={() => handleLikedChange(index, 'liked')}
                 />
-                Liked
+                Enjoyed
               </label>
               <label>
                 <input
@@ -71,11 +73,15 @@ const BookList = ({ books, setBooks }) => {
         ))}
         {books.length < 10 && (
           <div style={{ textAlign: 'center' }}>
-            <button onClick={addBook} style={{ marginTop: '10px', padding: '8px 16px', borderRadius: '10px', backgroundColor: '#f3dfc4', fontWeight: 'bold', border: 'none' }}>
+            <button onClick={addBook} style={{ marginTop: '10px', padding: '8px 16px', borderRadius: '10px', backgroundColor: '#675456', fontWeight: 'bold', border: 'none'}}
+            onMouseOver={(e) => e.target.style.backgroundColor = 'white'}
+            onMouseOut={(e) => e.target.style.backgroundColor = '#675456'}
+            >
               + Add Another Book
             </button>
           </div>
         )}
+  
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+#PART 1 CONTENT FILTER
+
 import json
 import pandas as pd
 import numpy as np
@@ -8,7 +10,7 @@ ACCEPTED_SHELVES = set([
     'coming-of-age', 'sci-fi', 'magic', 'urban-fantasy', 'action', 'family', 'dystopian',
     'drama', 'thriller', 'suspense', 'paranormal-romance', 'children’s', 'adult', 'kids', 'teens', 'youth', 'survival',
     'trilogy', 'post-apocalyptic', 'mythology', 'childhood-books', 'vampires', 'crime',
-    'futuristic', 'lgbtq'
+    'lgbtq', 'horror', 'historical-fiction', 'short-story', 'self-help', 'womens-fiction', 'women', 'non-fiction'
 ])
 
 def filter_shelves(shelves):
@@ -47,14 +49,20 @@ def recommend_books(df, genre_keyword, min_pages, max_pages):
         (df['top_shelf_names'].apply(lambda names: genre_keyword.lower() in names))
     ].copy()
 
-    w1, w2, w3 = 5, 2, 2
+    w1, w2, w3 = 6, 1, 2
+    #IMPORTANT - how the categories are weighted (subject to change)
+    #w1 is for avg rating
+    #w2 is for how many ratings there are
+    #w3 is for how many books there are on that genre shelf
     filtered['score'] = (
         w1 * filtered['average_rating'] +
         w2 * np.log1p(filtered['ratings_count']) +
-        w3 * np.log1p(filtered['genre_shelf_count'])
+        w3 * np.log1p((filtered['genre_shelf_count']/filtered['ratings_count']) * 50)
     )
+
+    
     print(f"[TIMING] content filter took {time.time() - start:.2f} seconds")
     print("[DEBUG] Final returned columns from content filter:", filtered.columns.tolist())
 
-    return filtered[['book_id', 'title', 'score', 'description', 'image_url']]
+    return filtered[['book_id', 'title', 'score', 'description', 'image_url', 'url']]
 

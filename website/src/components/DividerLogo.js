@@ -1,6 +1,6 @@
 //ignore (probably won't use it)
 import React from 'react';
-
+import '../App.css'
 const DividerLogo = () => {
   return (
     <div style={{
@@ -13,18 +13,18 @@ const DividerLogo = () => {
       <div style={{
         flex: 1,
         height: '6px',
-        backgroundImage: 'linear-gradient(#ffffff 20%, transparent 20%, transparent 66%, #ffffff 20%)',
+        backgroundImage: 'linear-gradient(#ab938c 20%, transparent 36%, transparent 66%, #ab938c 20%)',
         backgroundSize: '100% 100%',
         margin: '0 30px'
       }} />
-      <h1 style={{ color: 'white', fontFamily: '"Fira Code", monospace' }}>
-      Complete the Form Below
+      <h1 style={{ color: 'white', fontFamily: 'Tangerine, cursive', fontSize: '60px'}}>
+      Enter Your Preferences
       </h1>
 
       <div style={{
         flex: 1,
         height: '6px',
-        backgroundImage: 'linear-gradient(#ffffff 20%, transparent 20%, transparent 66%, #ffffff 20%)',
+        backgroundImage: 'linear-gradient(#ab938c 20%, transparent 36%, transparent 66%, #ab938c 20%)',
         backgroundSize: '100% 100%',
         margin: '0 30px'
       }} />

@@ -15,6 +15,7 @@ function LearnMore() {
         style={{ textAlign: 'center', padding: '70px' }}
       >
         <div style={{
+          fontFamily: '"Fira Code", monospace',
           marginTop: '80px',
           paddingTop: '20px',
           background: 'rgba(0, 0, 0, 0.5)',
@@ -27,10 +28,9 @@ function LearnMore() {
           lineHeight: '1.8',
           fontSize: '18px',
           textAlign: 'left',
-          fontFamily: 'Monaco'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
-            <h2 style={{ fontSize: '32px', margin: 0 }}>Our Algorithm</h2>
+            <h2 style={{ fontSize: '60px', margin: 0, fontFamily: 'Tangerine, cursive' }}>Our Algorithm</h2>
             <img src={dividerLogo} alt="Divider Logo" style={{ height: '40px' }} />
           </div>
 
@@ -39,7 +39,7 @@ function LearnMore() {
           <p><strong>Content Based Filtering</strong></p>
           <p style = {{color: '#d3d3d3'}}>Each book is evaluated based on attributes such as genre (shelf tags), number of pages, average rating, and ratings volume. We assign a weighted score to every candidate book based on how well it matches the user’s specified preferences. To ensure genre relevance, the requested genre must appear in the book’s top shelves with a minimum frequency threshold.</p>
 
-          <p><strong>Collaborative Filtering</strong><br /> <p style = {{color: '#d3d3d3'}}>When the user provides feedback on books they've liked or disliked, we apply a latent factor model using Singular Value Decomposition (SVD). We construct a sparse matrix of user-book ratings from the Goodreads dataset and add an extra row for the user representing their likes/dislikes (e.g. we assume rating = 5 for liked books, 1 for disliked). SVD factorizes this matrix into lower-dimensional representations that capture hidden relationships between users and books. The reconstructed matrix tells us the user's predicted ratings, and are considered in a book's hybrid score.</p></p>
+          <p><strong>Collaborative Filtering</strong><br /> <p style = {{color: '#d3d3d3'}}>We constructed a sparse matrix of user-book ratings from the Goodreads dataset. When the user inputs their past reads, we add an extra matrix row for the user representing their likes/dislikes. We then factorize this matrix with Singular Value Decomposition (SVD) into lower-dimensional representations that capture hidden relationships between users and books. The reconstructed matrix tells us the user's predicted ratings, and are considered in a book's hybrid score.</p></p>
 
           <p style = {{color: '#d3d3d3'}}>We combine both content scores and collaborative scores (if feedback is provided) to produce a ranked list of books tailored just for you.</p>
 
@@ -53,7 +53,7 @@ function LearnMore() {
   backgroundColor: '#1e140a',
   color: '#fff',
   padding: '10px 30px 10px 30px',  // Less padding: top-right-bottom-left
-  fontFamily: 'Monaco',
+  fontFamily: '"Fira Code", monospace',
   display: 'flex',
   justifyContent: 'flex-start'
 }}>
@@ -68,17 +68,17 @@ function LearnMore() {
     <ul style={{ paddingLeft: '20px' }}>
       <li>
         Mengting Wan, Julian McAuley,
-        <a href="https://cseweb.ucsd.edu/~jmcauley/pdfs/recsys18b.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#ccc' }}>
+        <a href="https://cseweb.ucsd.edu/~jmcauley/pdfs/recsys18b.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>
           {" "}“Item Recommendation on Monotonic Behavior Chains”
         </a>, RecSys'18.
-        <a href="https://cseweb.ucsd.edu/~jmcauley/bibtex/recsys18b.txt" target="_blank" rel="noopener noreferrer" style={{ color: '#ccc' }}> [bibtex]</a>
+        <a href="https://cseweb.ucsd.edu/~jmcauley/bibtex/recsys18b.txt" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}> [bibtex]</a>
       </li>
       <li>
         Mengting Wan, Rishabh Misra, Ndapa Nakashole, Julian McAuley,
-        <a href="https://aclanthology.org/P19-1355/" target="_blank" rel="noopener noreferrer" style={{ color: '#ccc' }}>
+        <a href="https://aclanthology.org/P19-1355/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>
           {" "}“Fine-Grained Spoiler Detection from Large-Scale Review Corpora”
         </a>, ACL’19.
-        <a href="https://cseweb.ucsd.edu/~jmcauley/bibtex/acl19.txt" target="_blank" rel="noopener noreferrer" style={{ color: '#ccc' }}> [bibtex]</a>
+        <a href="https://cseweb.ucsd.edu/~jmcauley/bibtex/acl19.txt" target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}> [bibtex]</a>
       </li>
     </ul>
   </div>

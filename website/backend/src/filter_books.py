@@ -1,3 +1,5 @@
+#unused - filtered books to only english and only non-duplicates
+
 import gzip
 import json
 import pandas as pd

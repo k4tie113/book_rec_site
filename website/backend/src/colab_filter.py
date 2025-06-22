@@ -1,3 +1,5 @@
+#PART 2 COLAB Filter
+
 import gzip                # for reading compressed .json.gz interaction file
 import json                # for parsing JSON lines
 import os                  # for file path checks and directory creation

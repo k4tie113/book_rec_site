@@ -1,3 +1,5 @@
+# run this script through python to test out the content and collab filters
+import numpy as np
 import pandas as pd
 from content_filter import recommend_books, filter_shelves
 from colab_filter import compute_collab_scores
@@ -24,7 +26,22 @@ def combine_scores(content_df, collab_df, alpha=1.0):
     if collab_df.empty:
         content_df['collab_score'] = 0  # pad missing column
         content_df['final_score'] = content_df['score']
-        return content_df.sort_values(by='final_score', ascending=False)
+        merged = content_df
+        # SQUARE ROOT SCALLING
+        if not merged.empty:
+            min_final_score = merged['final_score'].min()
+            max_final_score = merged['final_score'].max()
+
+        if max_final_score > min_final_score:
+            # normalize scores to a 0-1 range
+            normalized_scores = (merged['final_score'] - min_final_score) / (max_final_score - min_final_score)
+            # Apply the square root , scale to 100
+            # scale to 0-100
+            merged['final_score'] = np.sqrt(normalized_scores) * 100
+        else:
+            merged['final_score'] = 50 if len(merged) > 1 else 90
+
+        return merged.sort_values(by='final_score', ascending=False)
 
     merged = pd.merge(content_df, collab_df, on='book_id', how='left')
     # Scale collaborative scores to the same range as content scores
@@ -38,9 +55,21 @@ def combine_scores(content_df, collab_df, alpha=1.0):
 
 
     merged['final_score'] = merged['score'] + alpha * merged['collab_score']
+
+    #SQUARE ROOT SCALING
+    if not merged.empty:
+        min_final_score = merged['final_score'].min()
+        max_final_score = merged['final_score'].max()
+
+        if max_final_score > min_final_score:
+            normalized_scores = (merged['final_score'] - min_final_score) / (max_final_score - min_final_score)
+            merged['final_score'] = np.sqrt(normalized_scores) * 100
+        else:
+            merged['final_score'] = 50 if len(merged) > 1 else 90
+
     return merged.sort_values(by='final_score', ascending=False)
 
-# === Main entry ===
+# main entry
 def start_process():
     books_df = load_clean_books("../../data/goodreads_valid_books_young_adult.json.gz")
 
