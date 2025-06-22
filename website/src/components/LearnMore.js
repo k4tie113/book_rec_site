@@ -29,7 +29,7 @@ function LearnMore() {
           textAlign: 'left',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
-            <h2 style={{ fontSize: '60px', margin: 0, fontFamily: 'Tangerine, cursive' }}>Our Algorithm</h2>
+            <h2 style={{ fontSize: '55px', margin: 0, fontFamily: 'Tangerine, cursive' }}>Our Algorithm</h2>
           </div>
 
 
@@ -42,6 +42,7 @@ function LearnMore() {
           <p style = {{color: '#d3d3d3'}}>We combine both content scores and collaborative scores (if feedback is provided) to produce a ranked list of books tailored just for you.</p>
 
           <p><strong>Data Source </strong><br/><p style = {{color: '#d3d3d3'}}>All recommendations are powered by the <em>Goodreads Young Adult Books and Interactions Dataset</em>, consisting of over 93,000 books and 30+ million reader interactions, including detailed review and rating information.</p></p>
+          <a href="https://github.com/k4tie113/book_rec_site" target="_blank" rel="noopener noreferrer" style={{ color: '#white' }}> Visit our github to see more! </a>
         </div>
       </motion.div>
 
