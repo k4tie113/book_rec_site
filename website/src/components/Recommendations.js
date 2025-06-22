@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import backgroundImage from '../images/bookrates.png';
-import dividerLogo from '../images/logo.png'
 
 const Recommendations = () => {
   const location = useLocation();
@@ -43,11 +42,9 @@ const Recommendations = () => {
         gap: '20px', // spacing between logo and text
         marginBottom: '20px'
       }}>
-        <img src={dividerLogo} alt="Left Divider" style={{ height: '30px' }} />
         <h1 style={{ margin: 0, textAlign: 'center', fontFamily: 'Tangerine, cursive', fontSize: '60px' }}>
           Your Recommendations
         </h1>
-        <img src={dividerLogo} alt="Right Divider" style={{ height: '30px' }} />
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>

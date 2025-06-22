@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import dividerLogo from '../images/logo.png'
 import '../App.css';
 
 function LearnMore() {
@@ -31,7 +30,6 @@ function LearnMore() {
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
             <h2 style={{ fontSize: '60px', margin: 0, fontFamily: 'Tangerine, cursive' }}>Our Algorithm</h2>
-            <img src={dividerLogo} alt="Divider Logo" style={{ height: '40px' }} />
           </div>
 
 
