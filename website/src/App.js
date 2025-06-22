@@ -46,7 +46,7 @@ function HomePage() {
       .then(data => {
         navigate("/recommendations", { state: { recommendations: data } });
       })
-      .catch(err => alert("Sorry, something went wrong."))
+      .catch(err => alert("We're still working on connecting the Python scripts! Please hold tight and thanks for your patience."))
       .finally(() => setLoading(false)); // Stop loading
   };
   
