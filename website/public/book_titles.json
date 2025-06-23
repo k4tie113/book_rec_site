@@ -2704,14 +2704,6 @@
     "label": "Catch a Falling Star"
   },
   {
-    "value": "Catching Fire (Hunger Games, #2)",
-    "label": "Catching Fire (Hunger Games, #2)"
-  },
-  {
-    "value": "Catching Fire (The Hunger Games #2)",
-    "label": "Catching Fire (The Hunger Games #2)"
-  },
-  {
     "value": "Catching Fire (The Hunger Games, #2)",
     "label": "Catching Fire (The Hunger Games, #2)"
   },
@@ -16820,14 +16812,6 @@
     "label": "The Hunchback Assignments (The Hunchback Assignments, #1)"
   },
   {
-    "value": "The Hunger Games",
-    "label": "The Hunger Games"
-  },
-  {
-    "value": "The Hunger Games (Hunger Games, #1)",
-    "label": "The Hunger Games (Hunger Games, #1)"
-  },
-  {
     "value": "The Hunger Games (The Hunger Games, #1)",
     "label": "The Hunger Games (The Hunger Games, #1)"
   },
@@ -21891,4 +21875,1778 @@
     "value": "ЯED (True Reign, #2)",
     "label": "ЯED (True Reign, #2)"
   }
+  ,
+  {
+    "value": "Lord of the Flies",
+    "label": "Lord of the Flies"
+  },
+  {
+    "value": "Atonement",
+    "label": "Atonement"
+  },
+  {
+    "value": "Flowers for Algernon",
+    "label": "Flowers for Algernon"
+  },
+  {
+    "value": "Pride and Prejudice",
+    "label": "Pride and Prejudice"
+  },
+  {
+    "value": "1984",
+    "label": "1984"
+  },
+    {
+      "value": "To Kill a Mockingbird",
+      "label": "To Kill a Mockingbird"
+    },
+    {
+      "value": "The Great Gatsby",
+      "label": "The Great Gatsby"
+    },
+    {
+      "value": "Pride and Prejudice",
+      "label": "Pride and Prejudice"
+    },
+    {
+      "value": "The Catcher in the Rye",
+      "label": "The Catcher in the Rye"
+    },
+    {
+      "value": "The Hobbit",
+      "label": "The Hobbit"
+    },
+    {
+      "value": "The Lord of the Rings",
+      "label": "The Lord of the Rings"
+    },
+    {
+      "value": "Harry Potter and the Sorcerer's Stone",
+      "label": "Harry Potter and the Sorcerer's Stone"
+    },
+    {
+      "value": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+      "label": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe"
+    },
+    {
+      "value": "Anne of Green Gables",
+      "label": "Anne of Green Gables"
+    },
+    {
+      "value": "Little Women",
+      "label": "Little Women"
+    },
+    {
+      "value": "Moby Dick",
+      "label": "Moby Dick"
+    },
+    {
+      "value": "War and Peace",
+      "label": "War and Peace"
+    },
+    {
+      "value": "Crime and Punishment",
+      "label": "Crime and Punishment"
+    },
+    {
+      "value": "The Odyssey",
+      "label": "The Odyssey"
+    },
+    {
+      "value": "Jane Eyre",
+      "label": "Jane Eyre"
+    },
+    {
+      "value": "Wuthering Heights",
+      "label": "Wuthering Heights"
+    },
+    {
+      "value": "The Alchemist",
+      "label": "The Alchemist"
+    },
+    {
+      "value": "The Diary of a Young Girl",
+      "label": "The Diary of a Young Girl"
+    },
+    {
+      "value": "The Book Thief",
+      "label": "The Book Thief"
+    },
+    {
+      "value": "The Fault in Our Stars",
+      "label": "The Fault in Our Stars"
+    },
+    {
+      "value": "Gone Girl",
+      "label": "Gone Girl"
+    },
+    {
+      "value": "The Girl with the Dragon Tattoo",
+      "label": "The Girl with the Dragon Tattoo"
+    },
+    {
+      "value": "The Da Vinci Code",
+      "label": "The Da Vinci Code"
+    },
+    {
+      "value": "Angels & Demons",
+      "label": "Angels & Demons"
+    },
+    {
+      "value": "The Road",
+      "label": "The Road"
+    },
+    {
+      "value": "The Martian",
+      "label": "The Martian"
+    },
+    {
+      "value": "Ready Player One",
+      "label": "Ready Player One"
+    },
+    {
+      "value": "Ender's Game",
+      "label": "Ender's Game"
+    },
+    {
+      "value": "Dune",
+      "label": "Dune"
+    },
+    {
+      "value": "Slaughterhouse-Five",
+      "label": "Slaughterhouse-Five"
+    },
+    {
+      "value": "Frankenstein",
+      "label": "Frankenstein"
+    },
+    {
+      "value": "Dracula",
+      "label": "Dracula"
+    },
+    {
+      "value": "The Picture of Dorian Gray",
+      "label": "The Picture of Dorian Gray"
+    },
+    {
+      "value": "Alice's Adventures in Wonderland",
+      "label": "Alice's Adventures in Wonderland"
+    },
+    {
+      "value": "Through the Looking-Glass",
+      "label": "Through the Looking-Glass"
+    },
+    {
+      "value": "Peter Pan",
+      "label": "Peter Pan"
+    },
+    {
+      "value": "The Wind in the Willows",
+      "label": "The Wind in the Willows"
+    },
+    {
+      "value": "Winnie-the-Pooh",
+      "label": "Winnie-the-Pooh"
+    },
+    {
+      "value": "Charlotte's Web",
+      "label": "Charlotte's Web"
+    },
+    {
+      "value": "The Little Prince",
+      "label": "The Little Prince"
+    },
+    {
+      "value": "Matilda",
+      "label": "Matilda"
+    },
+    {
+      "value": "Charlie and the Chocolate Factory",
+      "label": "Charlie and the Chocolate Factory"
+    },
+    {
+      "value": "The BFG",
+      "label": "The BFG"
+    },
+    {
+      "value": "Where the Wild Things Are",
+      "label": "Where the Wild Things Are"
+    },
+    {
+      "value": "Green Eggs and Ham",
+      "label": "Green Eggs and Ham"
+    },
+    {
+      "value": "The Cat in the Hat",
+      "label": "The Cat in the Hat"
+    },
+    {
+      "value": "Oh, the Places You'll Go!",
+      "label": "Oh, the Places You'll Go!"
+    },
+    {
+      "value": "Goodnight Moon",
+      "label": "Goodnight Moon"
+    },
+    {
+      "value": "The Very Hungry Caterpillar",
+      "label": "The Very Hungry Caterpillar"
+    },
+    {
+      "value": "A Wrinkle in Time",
+      "label": "A Wrinkle in Time"
+    },
+    {
+      "value": "Bridge to Terabithia",
+      "label": "Bridge to Terabithia"
+    },
+    {
+      "value": "The Giver",
+      "label": "The Giver"
+    },
+    {
+      "value": "The Golden Compass",
+      "label": "The Golden Compass"
+    },
+    {
+      "value": "His Dark Materials: The Golden Compass",
+      "label": "His Dark Materials: The Golden Compass"
+    },
+    {
+      "value": "Life of Pi",
+      "label": "Life of Pi"
+    },
+    {
+      "value": "The Kite Runner",
+      "label": "The Kite Runner"
+    },
+    {
+      "value": "A Thousand Splendid Suns",
+      "label": "A Thousand Splendid Suns"
+    },
+    {
+      "value": "Memoirs of a Geisha",
+      "label": "Memoirs of a Geisha"
+    },
+    {
+      "value": "The Help",
+      "label": "The Help"
+    },
+    {
+      "value": "Water for Elephants",
+      "label": "Water for Elephants"
+    },
+    {
+      "value": "The Nightingale",
+      "label": "The Nightingale"
+    },
+    {
+      "value": "All the Light We Cannot See",
+      "label": "All the Light We Cannot See"
+    },
+    {
+      "value": "Where the Crawdads Sing",
+      "label": "Where the Crawdads Sing"
+    },
+    {
+      "value": "Educated",
+      "label": "Educated"
+    },
+    {
+      "value": "Becoming",
+      "label": "Becoming"
+    },
+    {
+      "value": "Sapiens: A Brief History of Humankind",
+      "label": "Sapiens: A Brief History of Humankind"
+    },
+    {
+      "value": "The Secret History",
+      "label": "The Secret History"
+    },
+    {
+      "value": "Circe",
+      "label": "Circe"
+    },
+    {
+      "value": "The Song of Achilles",
+      "label": "The Song of Achilles"
+    },
+    {
+      "value": "American Gods",
+      "label": "American Gods"
+    },
+    {
+      "value": "Good Omens",
+      "label": "Good Omens"
+    },
+    {
+      "value": "Neverwhere",
+      "label": "Neverwhere"
+    },
+    {
+      "value": "The Name of the Wind",
+      "label": "The Name of the Wind"
+    },
+    {
+      "value": "Mistborn: The Final Empire",
+      "label": "Mistborn: The Final Empire"
+    },
+    {
+      "value": "The Way of Kings",
+      "label": "The Way of Kings"
+    },
+    {
+      "value": "Red Rising",
+      "label": "Red Rising"
+    },
+    {
+      "value": "Project Hail Mary",
+      "label": "Project Hail Mary"
+    },
+    {
+      "value": "Recursion",
+      "label": "Recursion"
+    },
+    {
+      "value": "Dark Matter",
+      "label": "Dark Matter"
+    },
+    {
+      "value": "Blake Crouch: Dark Matter",
+      "label": "Blake Crouch: Dark Matter"
+    },
+    {
+      "value": "The Silent Patient",
+      "label": "The Silent Patient"
+    },
+    {
+      "value": "Verity",
+      "label": "Verity"
+    },
+    {
+      "value": "The Guest List",
+      "label": "The Guest List"
+    },
+    {
+      "value": "The Woman in Cabin 10",
+      "label": "The Woman in Cabin 10"
+    },
+    {
+      "value": "Big Little Lies",
+      "label": "Big Little Lies"
+    },
+    {
+      "value": "The Midnight Library",
+      "label": "The Midnight Library"
+    },
+    {
+      "value": "Eleanor Oliphant Is Completely Fine",
+      "label": "Eleanor Oliphant Is Completely Fine"
+    },
+    {
+      "value": "A Man Called Ove",
+      "label": "A Man Called Ove"
+    },
+    {
+      "value": "Where'd You Go, Bernadette",
+      "label": "Where'd You Go, Bernadette"
+    },
+    {
+      "value": "The Rosie Project",
+      "label": "The Rosie Project"
+    },
+    {
+      "value": "Daisy Jones & The Six",
+      "label": "Daisy Jones & The Six"
+    },
+    {
+      "value": "The Seven Husbands of Evelyn Hugo",
+      "label": "The Seven Husbands of Evelyn Hugo"
+    },
+    {
+      "value": "Red, White & Royal Blue",
+      "label": "Red, White & Royal Blue"
+    },
+    {
+      "value": "The Love Hypothesis",
+      "label": "The Love Hypothesis"
+    },
+    {
+      "value": "Beach Read",
+      "label": "Beach Read"
+    },
+    {
+      "value": "People We Meet on Vacation",
+      "label": "People We Meet on Vacation"
+    },
+    {
+      "value": "Get a Life, Chloe Brown",
+      "label": "Get a Life, Chloe Brown"
+    },
+    {
+      "value": "The Flatshare",
+      "label": "The Flatshare"
+    },
+    {
+      "value": "One Day",
+      "label": "One Day"
+    },
+    {
+      "value": "Normal People",
+      "label": "Normal People"
+    },
+    {
+      "value": "Conversations with Friends",
+      "label": "Conversations with Friends"
+    },
+    {
+      "value": "My Year of Rest and Relaxation",
+      "label": "My Year of Rest and Relaxation"
+    },
+    {
+      "value": "Pachinko",
+      "label": "Pachinko"
+    },
+    {
+      "value": "Homegoing",
+      "label": "Homegoing"
+    },
+    {
+      "value": "The Nickel Boys",
+      "label": "The Nickel Boys"
+    },
+    {
+      "value": "The Underground Railroad",
+      "label": "The Underground Railroad"
+    },
+    {
+      "value": "Between the World and Me",
+      "label": "Between the World and Me"
+    },
+    {
+      "value": "Beloved",
+      "label": "Beloved"
+    },
+    {
+      "value": "Sula",
+      "label": "Sula"
+    },
+    {
+      "value": "Song of Solomon",
+      "label": "Song of Solomon"
+    },
+    {
+      "value": "Dread Nation",
+      "label": "Dread Nation"
+    },
+    {
+      "value": "Mexican Gothic",
+      "label": "Mexican Gothic"
+    },
+    {
+      "value": "The Haunting of Hill House",
+      "label": "The Haunting of Hill House"
+    },
+    {
+      "value": "Shirley Jackson: The Haunting of Hill House",
+      "label": "Shirley Jackson: The Haunting of Hill House"
+    },
+    {
+      "value": "Rebecca",
+      "label": "Rebecca"
+    },
+    {
+      "value": "The Secret Garden",
+      "label": "The Secret Garden"
+    },
+    {
+      "value": "A Little Princess",
+      "label": "A Little Princess"
+    },
+    {
+      "value": "Black Beauty",
+      "label": "Black Beauty"
+    },
+    {
+      "value": "The Adventures of Tom Sawyer",
+      "label": "The Adventures of Tom Sawyer"
+    },
+    {
+      "value": "The Adventures of Huckleberry Finn",
+      "label": "The Adventures of Huckleberry Finn"
+    },
+    {
+      "value": "Treasure Island",
+      "label": "Treasure Island"
+    },
+    {
+      "value": "Kidnapped",
+      "label": "Kidnapped"
+    },
+    {
+      "value": "Around the World in Eighty Days",
+      "label": "Around the World in Eighty Days"
+    },
+    {
+      "value": "Journey to the Center of the Earth",
+      "label": "Journey to the Center of the Earth"
+    },
+    {
+      "value": "Twenty Thousand Leagues Under the Sea",
+      "label": "Twenty Thousand Leagues Under the Sea"
+    },
+    {
+      "value": "The Time Machine",
+      "label": "The Time Machine"
+    },
+    {
+      "value": "The War of the Worlds",
+      "label": "The War of the Worlds"
+    },
+    {
+      "value": "Brave New World",
+      "label": "Brave New World"
+    },
+    {
+      "value": "Fahrenheit 451",
+      "label": "Fahrenheit 451"
+    },
+    {
+      "value": "The Handmaid's Tale",
+      "label": "The Handmaid's Tale"
+    },
+    {
+      "value": "Blind Willow, Sleeping Woman",
+      "label": "Blind Willow, Sleeping Woman"
+    },
+    {
+      "value": "Kafka on the Shore",
+      "label": "Kafka on the Shore"
+    },
+    {
+      "value": "Norwegian Wood",
+      "label": "Norwegian Wood"
+    },
+    {
+      "value": "The Wind-Up Bird Chronicle",
+      "label": "The Wind-Up Bird Chronicle"
+    },
+    {
+      "value": "A Brief History of Time",
+      "label": "A Brief History of Time"
+    },
+    {
+      "value": "Cosmos",
+      "label": "Cosmos"
+    },
+    {
+      "value": "The Selfish Gene",
+      "label": "The Selfish Gene"
+    },
+    {
+      "value": "Thinking, Fast and Slow",
+      "label": "Thinking, Fast and Slow"
+    },
+    {
+      "value": "Guns, Germs, and Steel",
+      "label": "Guns, Germs, and Steel"
+    },
+    {
+      "value": "The Immortal Life of Henrietta Lacks",
+      "label": "The Immortal Life of Henrietta Lacks"
+    },
+    {
+      "value": "Into Thin Air",
+      "label": "Into Thin Air"
+    },
+    {
+      "value": "In Cold Blood",
+      "label": "In Cold Blood"
+    },
+    {
+      "value": "The Devil in the White City",
+      "label": "The Devil in the White City"
+    },
+    {
+      "value": "Killing Lincoln",
+      "label": "Killing Lincoln"
+    },
+    {
+      "value": "The Splendid and the Vile",
+      "label": "The Splendid and the Vile"
+    },
+    {
+      "value": "The Boys in the Boat",
+      "label": "The Boys in the Boat"
+    },
+    {
+      "value": "Unbroken",
+      "label": "Unbroken"
+    },
+    {
+      "value": "Becoming Michelle Obama",
+      "label": "Becoming Michelle Obama"
+    },
+    {
+      "value": "The 7 Habits of Highly Effective People",
+      "label": "The 7 Habits of Highly Effective People"
+    },
+    {
+      "value": "Atomic Habits",
+      "label": "Atomic Habits"
+    },
+    {
+      "value": "Daring Greatly",
+      "label": "Daring Greatly"
+    },
+    {
+      "value": "Mindset: The New Psychology of Success",
+      "label": "Mindset: The New Psychology of Success"
+    },
+    {
+      "value": "Grit: The Power of Passion and Perseverance",
+      "label": "Grit: The Power of Passion and Perseverance"
+    },
+    {
+      "value": "Factfulness",
+      "label": "Factfulness"
+    },
+    {
+      "value": "Freakonomics",
+      "label": "Freakonomics"
+    },
+    {
+      "value": "Outliers",
+      "label": "Outliers"
+    },
+    {
+      "value": "The Tipping Point",
+      "label": "The Tipping Point"
+    },
+    {
+      "value": "David and Goliath",
+      "label": "David and Goliath"
+    },
+    {
+      "value": "Capital in the Twenty-First Century",
+      "label": "Capital in the Twenty-First Century"
+    },
+    {
+      "value": "Nudge",
+      "label": "Nudge"
+    },
+    {
+      "value": "The Undoing Project",
+      "label": "The Undoing Project"
+    },
+    {
+      "value": "Fooled by Randomness",
+      "label": "Fooled by Randomness"
+    },
+    {
+      "value": "The Black Swan",
+      "label": "The Black Swan"
+    },
+    {
+      "value": "Antifragile",
+      "label": "Antifragile"
+    },
+    {
+      "value": "When Breath Becomes Air",
+      "label": "When Breath Becomes Air"
+    },
+    {
+      "value": "Being Mortal",
+      "label": "Being Mortal"
+    },
+    {
+      "value": "The Emperor of All Maladies",
+      "label": "The Emperor of All Maladies"
+    },
+    {
+      "value": "Salt, Fat, Acid, Heat",
+      "label": "Salt, Fat, Acid, Heat"
+    },
+    {
+      "value": "The Joy of Cooking",
+      "label": "The Joy of Cooking"
+    },
+    {
+      "value": "Barefoot Contessa Family Style",
+      "label": "Barefoot Contessa Family Style"
+    },
+    {
+      "value": "Cravings by Chrissy Teigen",
+      "label": "Cravings by Chrissy Teigen"
+    },
+    {
+      "value": "Plenty",
+      "label": "Plenty"
+    },
+    {
+      "value": "Jerusalem",
+      "label": "Jerusalem"
+    },
+    {
+      "value": "The Food Lab",
+      "label": "The Food Lab"
+    },
+    {
+      "value": "On Food and Cooking",
+      "label": "On Food and Cooking"
+    },
+    {
+      "value": "Kitchen Confidential",
+      "label": "Kitchen Confidential"
+    },
+    {
+      "value": "A Moveable Feast",
+      "label": "A Moveable Feast"
+    },
+    {
+      "value": "Eat, Pray, Love",
+      "label": "Eat, Pray, Love"
+    },
+    {
+      "value": "Wild: From Lost to Found on the Pacific Crest Trail",
+      "label": "Wild: From Lost to Found on the Pacific Crest Trail"
+    },
+    {
+      "value": "Into the Wild",
+      "label": "Into the Wild"
+    },
+    {
+      "value": "A Walk in the Woods",
+      "label": "A Walk in the Woods"
+    },
+    {
+      "value": "The Sun Also Rises",
+      "label": "The Sun Also Rises"
+    },
+    {
+      "value": "A Farewell to Arms",
+      "label": "A Farewell to Arms"
+    },
+    {
+      "value": "For Whom the Bell Tolls",
+      "label": "For Whom the Bell Tolls"
+    },
+    {
+      "value": "The Old Man and the Sea",
+      "label": "The Old Man and the Sea"
+    },
+    {
+      "value": "The Grapes of Wrath",
+      "label": "The Grapes of Wrath"
+    },
+    {
+      "value": "Of Mice and Men",
+      "label": "Of Mice and Men"
+    },
+    {
+      "value": "East of Eden",
+      "label": "East of Eden"
+    },
+    {
+      "value": "Catch-22",
+      "label": "Catch-22"
+    },
+    {
+      "value": "The Bell Jar",
+      "label": "The Bell Jar"
+    },
+    {
+      "value": "One Hundred Years of Solitude",
+      "label": "One Hundred Years of Solitude"
+    },
+    {
+      "value": "Love in the Time of Cholera",
+      "label": "Love in the Time of Cholera"
+    },
+    {
+      "value": "The Hitchhiker's Guide to the Galaxy",
+      "label": "The Hitchhiker's Guide to the Galaxy"
+    },
+    {
+      "value": "A Clockwork Orange",
+      "label": "A Clockwork Orange"
+    },
+    {
+      "value": "Do Androids Dream of Electric Sheep?",
+      "label": "Do Androids Dream of Electric Sheep?"
+    },
+    {
+      "value": "Neuromancer",
+      "label": "Neuromancer"
+    },
+    {
+      "value": "Snow Crash",
+      "label": "Snow Crash"
+    },
+    {
+      "value": "The Martian Chronicles",
+      "label": "The Martian Chronicles"
+    },
+    {
+      "value": "Something Wicked This Way Comes",
+      "label": "Something Wicked This Way Comes"
+    },
+    {
+      "value": "IT",
+      "label": "IT"
+    },
+    {
+      "value": "The Shining",
+      "label": "The Shining"
+    },
+    {
+      "value": "Misery",
+      "label": "Misery"
+    },
+    {
+      "value": "The Stand",
+      "label": "The Stand"
+    },
+    {
+      "value": "Pet Sematary",
+      "label": "Pet Sematary"
+    },
+    {
+      "value": "Oryx and Crake",
+      "label": "Oryx and Crake"
+    },
+    {
+      "value": "Alias Grace",
+      "label": "Alias Grace"
+    },
+    {
+      "value": "The Testaments",
+      "label": "The Testaments"
+    },
+    {
+      "value": "American Psycho",
+      "label": "American Psycho"
+    },
+    {
+      "value": "Fight Club",
+      "label": "Fight Club"
+    },
+    {
+      "value": "Choke",
+      "label": "Choke"
+    },
+    {
+      "value": "Invisible Man",
+      "label": "Invisible Man"
+    },
+    {
+      "value": "Native Son",
+      "label": "Native Son"
+    },
+    {
+      "value": "Their Eyes Were Watching God",
+      "label": "Their Eyes Were Watching God"
+    },
+    {
+      "value": "I Know Why the Caged Bird Sings",
+      "label": "I Know Why the Caged Bird Sings"
+    },
+    {
+      "value": "The Color Purple",
+      "label": "The Color Purple"
+    },
+    {
+      "value": "Kindred",
+      "label": "Kindred"
+    },
+    {
+      "value": "Parable of the Sower",
+      "label": "Parable of the Sower"
+    },
+    {
+      "value": "Dawn",
+      "label": "Dawn"
+    },
+    {
+      "value": "The Left Hand of Darkness",
+      "label": "The Left Hand of Darkness"
+    },
+    {
+      "value": "A Wizard of Earthsea",
+      "label": "A Wizard of Earthsea"
+    },
+    {
+      "value": "The Last Unicorn",
+      "label": "The Last Unicorn"
+    },
+    {
+      "value": "Jonathan Strange & Mr Norrell",
+      "label": "Jonathan Strange & Mr Norrell"
+    },
+    {
+      "value": "Piranesi",
+      "label": "Piranesi"
+    },
+    {
+      "value": "The House in the Cerulean Sea",
+      "label": "The House in the Cerulean Sea"
+    },
+    {
+      "value": "Under the Whispering Door",
+      "label": "Under the Whispering Door"
+    },
+    {
+      "value": "The Priory of the Orange Tree",
+      "label": "The Priory of the Orange Tree"
+    },
+    {
+      "value": "A Court of Thorns and Roses",
+      "label": "A Court of Thorns and Roses"
+    },
+    {
+      "value": "From Blood and Ash",
+      "label": "From Blood and Ash"
+    },
+    {
+      "value": "The Poppy War",
+      "label": "The Poppy War"
+    },
+    {
+      "value": "Jade City",
+      "label": "Jade City"
+    },
+    {
+      "value": "The Lies of Locke Lamora",
+      "label": "The Lies of Locke Lamora"
+    },
+    {
+      "value": "Nevernight",
+      "label": "Nevernight"
+    },
+    {
+      "value": "A Darker Shade of Magic",
+      "label": "A Darker Shade of Magic"
+    },
+    {
+      "value": "Gideon the Ninth",
+      "label": "Gideon the Ninth"
+    },
+    {
+      "value": "Mexican Gothic",
+      "label": "Mexican Gothic"
+    },
+    {
+      "value": "My Best Friend's Exorcism",
+      "label": "My Best Friend's Exorcism"
+    },
+    {
+      "value": "The Exorcist",
+      "label": "The Exorcist"
+    },
+    {
+      "value": "Rosemary's Baby",
+      "label": "Rosemary's Baby"
+    },
+    {
+      "value": "Bird Box",
+      "label": "Bird Box"
+    },
+    {
+      "value": "The Cabin at the End of the World",
+      "label": "The Cabin at the End of the World"
+    },
+    {
+      "value": "Mexican Gothic",
+      "label": "Mexican Gothic"
+    },
+    {
+      "value": "The Whisper Man",
+      "label": "The Whisper Man"
+    },
+    {
+      "value": "The Guest List",
+      "label": "The Guest List"
+    },
+    {
+      "value": "The Last Thing He Told Me",
+      "label": "The Last Thing He Told Me"
+    },
+    {
+      "value": "Where the Forest Meets the Stars",
+      "label": "Where the Forest Meets the Stars"
+    },
+    {
+      "value": "Anxious People",
+      "label": "Anxious People"
+    },
+    {
+      "value": "Britt-Marie Was Here",
+      "label": "Britt-Marie Was Here"
+    },
+    {
+      "value": "The Thursday Murder Club",
+      "label": "The Thursday Murder Club"
+    },
+    {
+      "value": "Exit West",
+      "label": "Exit West"
+    },
+    {
+      "value": "An American Marriage",
+      "label": "An American Marriage"
+    },
+    {
+      "value": "Transcendent Kingdom",
+      "label": "Transcendent Kingdom"
+    },
+    {
+      "value": "The Vanishing Half",
+      "label": "The Vanishing Half"
+    },
+    {
+      "value": "A Burning",
+      "label": "A Burning"
+    },
+    {
+      "value": "The White Album",
+      "label": "The White Album"
+    },
+    {
+      "value": "Slouching Towards Bethlehem",
+      "label": "Slouching Towards Bethlehem"
+    },
+    {
+      "value": "The Year of Magical Thinking",
+      "label": "The Year of Magical Thinking"
+    },
+    {
+      "value": "Blue Nights",
+      "label": "Blue Nights"
+    },
+    {
+      "value": "Just Kids",
+      "label": "Just Kids"
+    },
+    {
+      "value": "The Glass Castle",
+      "label": "The Glass Castle"
+    },
+    {
+      "value": "Persepolis",
+      "label": "Persepolis"
+    },
+    {
+      "value": "Fun Home",
+      "label": "Fun Home"
+    },
+    {
+      "value": "Maus",
+      "label": "Maus"
+    },
+    {
+      "value": "Saga",
+      "label": "Saga"
+    },
+    {
+      "value": "Watchmen",
+      "label": "Watchmen"
+    },
+    {
+      "value": "The Sandman: Preludes & Nocturnes",
+      "label": "The Sandman: Preludes & Nocturnes"
+    },
+    {
+      "value": "The Handmaid's Tale (Graphic Novel)",
+      "label": "The Handmaid's Tale (Graphic Novel)"
+    },
+    {
+      "value": "V for Vendetta",
+      "label": "V for Vendetta"
+    },
+    {
+      "value": "The Killing Joke",
+      "label": "The Killing Joke"
+    },
+    {
+      "value": "Batman: Year One",
+      "label": "Batman: Year One"
+    },
+    {
+      "value": "All-Star Superman",
+      "label": "All-Star Superman"
+    },
+    {
+      "value": "Wonder Woman: Historia - The Amazons",
+      "label": "Wonder Woman: Historia - The Amazons"
+    },
+    {
+      "value": "Ms. Marvel: No Normal",
+      "label": "Ms. Marvel: No Normal"
+    },
+    {
+      "value": "Spider-Man: Into the Spider-Verse - The Official Movie Special",
+      "label": "Spider-Man: Into the Spider-Verse - The Official Movie Special"
+    },
+    {
+      "value": "Paper Girls",
+      "label": "Paper Girls"
+    },
+    {
+      "value": "Y: The Last Man",
+      "label": "Y: The Last Man"
+    },
+    {
+      "value": "Monstress",
+      "label": "Monstress"
+    },
+    {
+      "value": "Locke & Key",
+      "label": "Locke & Key"
+    },
+    {
+      "value": "Deadly Class",
+      "label": "Deadly Class"
+    },
+    {
+      "value": "The Wicked + The Divine",
+      "label": "The Wicked + The Divine"
+    },
+    {
+      "value": "Saga (Vol. 1)",
+      "label": "Saga (Vol. 1)"
+    },
+    {
+      "value": "Watchmen (Graphic Novel)",
+      "label": "Watchmen (Graphic Novel)"
+    },
+    {
+      "value": "The Sandman: The Doll's House",
+      "label": "The Sandman: The Doll's House"
+    },
+    {
+      "value": "Batman: The Long Halloween",
+      "label": "Batman: The Long Halloween"
+    },
+    {
+      "value": "Batman: Hush",
+      "label": "Batman: Hush"
+    },
+    {
+      "value": "Superman: Red Son",
+      "label": "Superman: Red Son"
+    },
+    {
+      "value": "Spider-Man: Kraven's Last Hunt",
+      "label": "Spider-Man: Kraven's Last Hunt"
+    },
+    {
+      "value": "Daredevil: Born Again",
+      "label": "Daredevil: Born Again"
+    },
+    {
+      "value": "Captain America: Winter Soldier",
+      "label": "Captain America: Winter Soldier"
+    },
+    {
+      "value": "Black Panther: A Nation Under Our Feet",
+      "label": "Black Panther: A Nation Under Our Feet"
+    },
+    {
+      "value": "Fables: Legends in Exile",
+      "label": "Fables: Legends in Exile"
+    },
+    {
+      "value": "Scott Pilgrim's Precious Little Life",
+      "label": "Scott Pilgrim's Precious Little Life"
+    },
+    {
+      "value": "Transmetropolitan: Back on the Street",
+      "label": "Transmetropolitan: Back on the Street"
+    },
+    {
+      "value": "Preacher: Gone to Texas",
+      "label": "Preacher: Gone to Texas"
+    },
+    {
+      "value": "The Boys: The Name of the Game",
+      "label": "The Boys: The Name of the Game"
+    },
+    {
+      "value": "Invincible: Family Ties",
+      "label": "Invincible: Family Ties"
+    },
+    {
+      "value": "Saga of the Swamp Thing: Saga",
+      "label": "Saga of the Swamp Thing: Saga"
+    },
+    {
+      "value": "Batman: The Dark Knight Returns",
+      "label": "Batman: The Dark Knight Returns"
+    },
+    {
+      "value": "Crisis on Infinite Earths",
+      "label": "Crisis on Infinite Earths"
+    },
+    {
+      "value": "Kingdom Come",
+      "label": "Kingdom Come"
+    },
+    {
+      "value": "Civil War (Marvel Comics)",
+      "label": "Civil War (Marvel Comics)"
+    },
+    {
+      "value": "House of M",
+      "label": "House of M"
+    },
+    {
+      "value": "Secret Wars (2015)",
+      "label": "Secret Wars (2015)"
+    },
+    {
+      "value": "Absolute Carnage",
+      "label": "Absolute Carnage"
+    },
+    {
+      "value": "Immortal Hulk: Or Is He Both?",
+      "label": "Immortal Hulk: Or Is He Both?"
+    },
+    {
+      "value": "Don't Go to Sleep",
+      "label": "Don't Go to Sleep"
+    },
+    {
+      "value": "Goosebumps: Welcome to Dead House",
+      "label": "Goosebumps: Welcome to Dead House"
+    },
+    {
+      "value": "The Baby-Sitters Club: Kristy's Great Idea",
+      "label": "The Baby-Sitters Club: Kristy's Great Idea"
+    },
+    {
+      "value": "Dog Man",
+      "label": "Dog Man"
+    },
+    {
+      "value": "Captain Underpants and the Adventures of Captain Underpants",
+      "label": "Captain Underpants and the Adventures of Captain Underpants"
+    },
+    {
+      "value": "Diary of a Wimpy Kid",
+      "label": "Diary of a Wimpy Kid"
+    },
+    {
+      "value": "The Cat in the Hat Comes Back",
+      "label": "The Cat in the Hat Comes Back"
+    },
+    {
+      "value": "The Lorax",
+      "label": "The Lorax"
+    },
+    {
+      "value": "Horton Hears a Who!",
+      "label": "Horton Hears a Who!"
+    },
+    {
+      "value": "If You Give a Mouse a Cookie",
+      "label": "If You Give a Mouse a Cookie"
+    },
+    {
+      "value": "The Mitten",
+      "label": "The Mitten"
+    },
+    {
+      "value": "Corduroy",
+      "label": "Corduroy"
+    },
+    {
+      "value": "Harold and the Purple Crayon",
+      "label": "Harold and the Purple Crayon"
+    },
+    {
+      "value": "Brown Bear, Brown Bear, What Do You See?",
+      "label": "Brown Bear, Brown Bear, What Do You See?"
+    },
+    {
+      "value": "The Poky Little Puppy",
+      "label": "The Poky Little Puppy"
+    },
+    {
+      "value": "Pat the Bunny",
+      "label": "Pat the Bunny"
+    },
+    {
+      "value": "The Tale of Peter Rabbit",
+      "label": "The Tale of Peter Rabbit"
+    },
+    {
+      "value": "Make Way for Ducklings",
+      "label": "Make Way for Ducklings"
+    },
+    {
+      "value": "Curious George",
+      "label": "Curious George"
+    },
+    {
+      "value": "Strega Nona",
+      "label": "Strega Nona"
+    },
+    {
+      "value": "Cloudy With a Chance of Meatballs",
+      "label": "Cloudy With a Chance of Meatballs"
+    },
+    {
+      "value": "Caps for Sale",
+      "label": "Caps for Sale"
+    },
+    {
+      "value": "Mike Mulligan and His Steam Shovel",
+      "label": "Mike Mulligan and His Steam Shovel"
+    },
+    {
+      "value": "The Story of Ferdinand",
+      "label": "The Story of Ferdinand"
+    },
+    {
+      "value": "The Snowy Day",
+      "label": "The Snowy Day"
+    },
+    {
+      "value": "Stone Soup",
+      "label": "Stone Soup"
+    },
+    {
+      "value": "The Giving Tree",
+      "label": "The Giving Tree"
+    },
+    {
+      "value": "Love You Forever",
+      "label": "Love You Forever"
+    },
+    {
+      "value": "If You Give a Pig a Pancake",
+      "label": "If You Give a Pig a Pancake"
+    },
+    {
+      "value": "Chicka Chicka Boom Boom",
+      "label": "Chicka Chicka Boom Boom"
+    },
+    {
+      "value": "Llama Llama Red Pajama",
+      "label": "Llama Llama Red Pajama"
+    },
+    {
+      "value": "Press Here",
+      "label": "Press Here"
+    },
+    {
+      "value": "The Book with No Pictures",
+      "label": "The Book with No Pictures"
+    },
+    {
+      "value": "Don't Let the Pigeon Drive the Bus!",
+      "label": "Don't Let the Pigeon Drive the Bus!"
+    },
+    {
+      "value": "Knuffle Bunny: A Cautionary Tale",
+      "label": "Knuffle Bunny: A Cautionary Tale"
+    },
+    {
+      "value": "The Day the Crayons Quit",
+      "label": "The Day the Crayons Quit"
+    },
+    {
+      "value": "Rosie Revere, Engineer",
+      "label": "Rosie Revere, Engineer"
+    },
+    {
+      "value": "Ada Twist, Scientist",
+      "label": "Ada Twist, Scientist"
+    },
+    {
+      "value": "Iggy Peck, Architect",
+      "label": "Iggy Peck, Architect"
+    },
+    {
+      "value": "The Polar Express",
+      "label": "The Polar Express"
+    },
+    {
+      "value": "Jumanji",
+      "label": "Jumanji"
+    },
+    {
+      "value": "Zathura",
+      "label": "Zathura"
+    },
+    {
+      "value": "The Mysteries of Harris Burdick",
+      "label": "The Mysteries of Harris Burdick"
+    },
+    {
+      "value": "Oh, The Places You'll Go! (Children's)",
+      "label": "Oh, The Places You'll Go! (Children's)"
+    },
+    {
+      "value": "How the Grinch Stole Christmas!",
+      "label": "How the Grinch Stole Christmas!"
+    },
+    {
+      "value": "The Lorax (Children's)",
+      "label": "The Lorax (Children's)"
+    },
+    {
+      "value": "Horton Hears a Who! (Children's)",
+      "label": "Horton Hears a Who! (Children's)"
+    },
+    {
+      "value": "The Story of Ferdinand (Children's)",
+      "label": "The Story of Ferdinand (Children's)"
+    },
+    {
+      "value": "The Snowy Day (Children's)",
+      "label": "The Snowy Day (Children's)"
+    },
+    {
+      "value": "Stone Soup (Children's)",
+      "label": "Stone Soup (Children's)"
+    },
+    {
+      "value": "The Giving Tree (Children's)",
+      "label": "The Giving Tree (Children's)"
+    },
+    {
+      "value": "Love You Forever (Children's)",
+      "label": "Love You Forever (Children's)"
+    },
+    {
+      "value": "If You Give a Pig a Pancake (Children's)",
+      "label": "If You Give a Pig a Pancake (Children's)"
+    },
+    {
+      "value": "Chicka Chicka Boom Boom (Children's)",
+      "label": "Chicka Chicka Boom Boom (Children's)"
+    },
+    {
+      "value": "Llama Llama Red Pajama (Children's)",
+      "label": "Llama Llama Red Pajama (Children's)"
+    },
+    {
+      "value": "Press Here (Children's)",
+      "label": "Press Here (Children's)"
+    },
+    {
+      "value": "The Book with No Pictures (Children's)",
+      "label": "The Book with No Pictures (Children's)"
+    },
+    {
+      "value": "Don't Let the Pigeon Drive the Bus! (Children's)",
+      "label": "Don't Let the Pigeon Drive the Bus! (Children's)"
+    },
+    {
+      "value": "Knuffle Bunny: A Cautionary Tale (Children's)",
+      "label": "Knuffle Bunny: A Cautionary Tale (Children's)"
+    },
+    {
+      "value": "The Day the Crayons Quit (Children's)",
+      "label": "The Day the Crayons Quit (Children's)"
+    },
+    {
+      "value": "Rosie Revere, Engineer (Children's)",
+      "label": "Rosie Revere, Engineer (Children's)"
+    },
+    {
+      "value": "Ada Twist, Scientist (Children's)",
+      "label": "Ada Twist, Scientist (Children's)"
+    },
+    {
+      "value": "Iggy Peck, Architect (Children's)",
+      "label": "Iggy Peck, Architect (Children's)"
+    },
+    {
+      "value": "Zathura (Children's)",
+      "label": "Zathura (Children's)"
+    },
+    {
+      "value": "The Mysteries of Harris Burdick (Children's)",
+      "label": "The Mysteries of Harris Burdick (Children's)"
+    },
+    {
+      "value": "Beach Read",
+      "label": "Beach Read"
+    },
+    {
+      "value": "People We Meet on Vacation",
+      "label": "People We Meet on Vacation"
+    },
+    {
+      "value": "Happy Place",
+      "label": "Happy Place"
+    },
+    {
+      "value": "Funny Story",
+      "label": "Funny Story"
+    },
+    {
+      "value": "Twisted Love",
+      "label": "Twisted Love"
+    },
+    {
+      "value": "Twisted Games",
+      "label": "Twisted Games"
+    },
+    {
+      "value": "Twisted Hate",
+      "label": "Twisted Hate"
+    },
+    {
+      "value": "Twisted Lies",
+      "label": "Twisted Lies"
+    },
+    {
+      "value": "Things We Never Got Over",
+      "label": "Things We Never Got Over"
+    },
+    {
+      "value": "Things We Hide From the Light",
+      "label": "Things We Hide From the Light"
+    },
+    {
+      "value": "Reminders of Him",
+      "label": "Reminders of Him"
+    },
+    {
+      "value": "Ugly Love",
+      "label": "Ugly Love"
+    },
+    {
+      "value": "The Spanish Love Deception",
+      "label": "The Spanish Love Deception"
+    },
+    {
+      "value": "The American Roommate Experiment",
+      "label": "The American Roommate Experiment"
+    },
+    {
+      "value": "Check & Mate",
+      "label": "Check & Mate"
+    },
+    {
+      "value": "Icebreaker",
+      "label": "Icebreaker"
+    },
+    {
+      "value": "Hook, Line, and Sinker",
+      "label": "Hook, Line, and Sinker"
+    },
+    {
+      "value": "A Ruin of Roses",
+      "label": "A Ruin of Roses"
+    },
+    {
+      "value": "The Witch Collector",
+      "label": "The Witch Collector"
+    },
+    {
+      "value": "Fourth Wing",
+      "label": "Fourth Wing"
+    },
+    {
+      "value": "Iron Flame",
+      "label": "Iron Flame"
+    },
+    {
+      "value": "A Court of Thorns and Roses",
+      "label": "A Court of Thorns and Roses"
+    },
+    {
+      "value": "A Court of Mist and Fury",
+      "label": "A Court of Mist and Fury"
+    },
+    {
+      "value": "A Court of Wings and Ruin",
+      "label": "A Court of Wings and Ruin"
+    },
+    {
+      "value": "A Court of Frost and Starlight",
+      "label": "A Court of Frost and Starlight"
+    },
+    {
+      "value": "A Court of Silver Flames",
+      "label": "A Court of Silver Flames"
+    },
+    {
+      "value": "King of Battle and Blood",
+      "label": "King of Battle and Blood"
+    },
+    {
+      "value": "Queen of Myth and Monsters",
+      "label": "Queen of Myth and Monsters"
+    },
+    {
+      "value": "Scent of Roses",
+      "label": "Scent of Roses"
+    },
+    {
+      "value": "The Serpent and the Wings of Night",
+      "label": "The Serpent and the Wings of Night"
+    },
+    {
+      "value": "House of Earth and Blood (Crescent City)",
+      "label": "House of Earth and Blood (Crescent City)"
+    },
+    {
+      "value": "House of Sky and Breath (Crescent City)",
+      "label": "House of Sky and Breath (Crescent City)"
+    },
+    {
+      "value": "House of Flame and Shadow (Crescent City)",
+      "label": "House of Flame and Shadow (Crescent City)"
+    },
+    {
+      "value": "Gild (The Plated Prisoner)",
+      "label": "Gild (The Plated Prisoner)"
+    },
+    {
+      "value": "Glint (The Plated Prisoner)",
+      "label": "Glint (The Plated Prisoner)"
+    },
+    {
+      "value": "Gleam (The Plated Prisoner)",
+      "label": "Gleam (The Plated Prisoner)"
+    },
+    {
+      "value": "Glow (The Plated Prisoner)",
+      "label": "Glow (The Plated Prisoner)"
+    },
+    {
+      "value": "A Shadow in the Ember (Flesh and Fire)",
+      "label": "A Shadow in the Ember (Flesh and Fire)"
+    },
+    {
+      "value": "A Light in the Flame (Flesh and Fire)",
+      "label": "A Light in the Flame (Flesh and Fire)"
+    },
+    {
+      "value": "The Fine Print",
+      "label": "The Fine Print"
+    },
+    {
+      "value": "Terms and Conditions",
+      "label": "Terms and Conditions"
+    },
+    {
+      "value": "The Last Thing He Told Me",
+      "label": "The Last Thing He Told Me"
+    },
+    {
+      "value": "Book Lovers (Emily Henry)",
+      "label": "Book Lovers (Emily Henry)"
+    },
+    {
+      "value": "The Seven Husbands of Evelyn Hugo",
+      "label": "The Seven Husbands of Evelyn Hugo"
+    },
+    {
+      "value": "Daisy Jones & The Six",
+      "label": "Daisy Jones & The Six"
+    },
+    {
+      "value": "Maybe Someday",
+      "label": "Maybe Someday"
+    },
+    {
+      "value": "November 9",
+      "label": "November 9"
+    },
+    {
+      "value": "All Your Perfects",
+      "label": "All Your Perfects"
+    },
+    {
+      "value": "The Hating Game",
+      "label": "The Hating Game"
+    },
+    {
+      "value": "Kiss an Angel",
+      "label": "Kiss an Angel"
+    },
+    {
+      "value": "Archer's Voice",
+      "label": "Archer's Voice"
+    },
+    {
+      "value": "The Sweet Spot",
+      "label": "The Sweet Spot"
+    },
+    {
+      "value": "The Fastest Way to Fall",
+      "label": "The Fastest Way to Fall"
+    },
+    {
+      "value": "Well Met",
+      "label": "Well Met"
+    },
+    {
+      "value": "The Kiss Quotient",
+      "label": "The Kiss Quotient"
+    },
+    {
+      "value": "The Bride Test",
+      "label": "The Bride Test"
+    },
+    {
+      "value": "Get a Life, Chloe Brown",
+      "label": "Get a Life, Chloe Brown"
+    },
+    {
+      "value": "Take a Hint, Dani Brown",
+      "label": "Take a Hint, Dani Brown"
+    },
+    {
+      "value": "Act Your Age, Eve Brown",
+      "label": "Act Your Age, Eve Brown"
+    },
+    {
+      "value": "You Had Me at Hola",
+      "label": "You Had Me at Hola"
+    },
+    {
+      "value": "A Princess in Theory",
+      "label": "A Princess in Theory"
+    },
+    {
+      "value": "The Duke and I (Bridgerton)",
+      "label": "The Duke and I (Bridgerton)"
+    },
+    {
+      "value": "The Viscount Who Loved Me (Bridgerton)",
+      "label": "The Viscount Who Loved Me (Bridgerton)"
+    },
+    {
+      "value": "An Offer From a Gentleman (Bridgerton)",
+      "label": "An Offer From a Gentleman (Bridgerton)"
+    },
+    {
+      "value": "When He Was Wicked (Bridgerton)",
+      "label": "When He Was Wicked (Bridgerton)"
+    },
+    {
+      "value": "Romancing Mr. Bridgerton (Bridgerton)",
+      "label": "Romancing Mr. Bridgerton (Bridgerton)"
+    },
+    {
+      "value": "To Sir Phillip, With Love (Bridgerton)",
+      "label": "To Sir Phillip, With Love (Bridgerton)"
+    },
+    {
+      "value": "It's In His Kiss (Bridgerton)",
+      "label": "It's In His Kiss (Bridgerton)"
+    },
+    {
+      "value": "On the Way to the Wedding (Bridgerton)",
+      "label": "On the Way to the Wedding (Bridgerton)"
+    }
+
 ]
