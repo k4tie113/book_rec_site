@@ -17,7 +17,7 @@ def load_valid_interactions(file_path, max_records=10_000):
     # This assumes a structure like: my_project/backend/src/colab_filter.py
     # and cache directory: my_project/backend/cache/
     # If your structure is different, adjust the '../backend/cache/' part.
-    cache_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../backend/cache'))
+    cache_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../cache'))
     cache_path = os.path.join(cache_dir, 'user_scores.parquet')
 
     # Ensure the cache directory exists.
@@ -200,26 +200,3 @@ def compute_collab_scores(user_feedback, books_df,
         # Return empty DataFrame on failure
         return pd.DataFrame(columns=['book_id', 'collab_score'])
 
-# You might want to remove or comment out the __main__ block if this file is only ever imported.
-# It's primarily for local testing of this specific script.
-if __name__ == '__main__':
-    # This block is for local testing of colab_filter.py in isolation.
-    # It requires you to have the data files in the expected relative paths.
-    print("Running colab_filter.py for local testing...")
-
-    # Mock books_df for testing
-    books_df_mock = pd.DataFrame([
-        {'book_id': 1, 'title': 'One of Us Is Lying', 'description': 'desc1', 'image_url': 'url1', 'url': 'link1'},
-        {'book_id': 2, 'title': 'Twilight', 'description': 'desc2', 'image_url': 'url2', 'url': 'link2'},
-        {'book_id': 3, 'title': 'Another Book', 'description': 'desc3', 'image_url': 'url3', 'url': 'link3'},
-        {'book_id': 4, 'title': 'Test Book', 'description': 'desc4', 'image_url': 'url4', 'url': 'link4'},
-    ])
-
-    user_feedback_mock = [
-        {"title": "One of Us Is Lying", "liked": True},
-        {"title": "Twilight", "liked": False},
-    ]
-
-    collab_scores = compute_collab_scores(user_feedback_mock, books_df_mock)
-    print("\nCollaborative Scores (mock test):")
-    print(collab_scores.head())
