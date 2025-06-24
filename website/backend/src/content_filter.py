@@ -62,7 +62,7 @@ def recommend_books(df, genre_keyword, min_pages, max_pages):
 
     
     print(f"[TIMING] content filter took {time.time() - start:.2f} seconds")
-    print("[DEBUG] Final returned columns from content filter:", filtered.columns.tolist())
+    #print("[DEBUG] Final returned columns from content filter:", filtered.columns.tolist())
 
     return filtered[['book_id', 'title', 'score', 'description', 'image_url', 'url']]
 

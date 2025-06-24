@@ -14,8 +14,8 @@ def load_clean_books(file_path):
             books.append(json.loads(line))
     df = pd.DataFrame(books)
 
-    print("[DEBUG] After loading raw books:", df.columns.tolist())
-    print("[DEBUG] Sample image_url:", df['image_url'].dropna().head(3).tolist())
+
+    # to print COLUMNS: print("[DEBUG] After loading raw books:", df.columns.tolist())
 
     df['popular_shelves'] = df['popular_shelves'].apply(filter_shelves)
     return df
@@ -91,11 +91,11 @@ def start_process():
         min_pages=min_pages,
         max_pages=max_pages
     )
-    print("[DEBUG] After recommend_books:", content_scored.columns.tolist())
-    print("[DEBUG] Sample image_url after recommend_books:", content_scored.get('image_url', 'MISSING'))
+    #print("[DEBUG] After recommend_books:", content_scored.columns.tolist())
+    
 
-    print("\n🟦 Columns BEFORE combine_scores (content_scored):")
-    print(content_scored.columns.tolist())
+    #print("\n🟦 Columns BEFORE combine_scores (content_scored):")
+    #print(content_scored.columns.tolist())
 
     if user_feedback:
         collab_scored = compute_collab_scores(user_feedback, books_df)
@@ -103,11 +103,11 @@ def start_process():
         collab_scored = pd.DataFrame(columns=['book_id', 'collab_score'])
 
     combined = combine_scores(content_scored, collab_scored, alpha=1.0)
-    print("\n🟨 Columns AFTER combine_scores (combined):")
-    print(combined.columns.tolist())
+    #print("\n🟨 Columns AFTER combine_scores (combined):")
+    #print(combined.columns.tolist())
 
-    print("\n\U0001F4DA Top Hybrid Recommendations:\n")
-    print(combined[['title', 'final_score']].head(10).to_string(index=False))
+    #print("\n\U0001F4DA Top Hybrid Recommendations:\n")
+    #print(combined[['title', 'final_score']].head(10).to_string(index=False))
 
 if __name__ == "__main__":
     start_process()

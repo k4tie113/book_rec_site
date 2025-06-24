@@ -25,7 +25,6 @@ import psutil, os
 # Load book data once at startup
 
 books_df = load_clean_books(os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/goodreads_valid_books_young_adult.json.gz')))
-
 print("Memory (MB)", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
 
 
@@ -46,10 +45,9 @@ def recommend_endpoint():
     min_pages = data.get("min_pages")
     max_pages = data.get("max_pages")
     user_feedback = data.get("user_feedback", [])
-    print(genre)
-    print(min_pages)
-    print(max_pages)
-    print(user_feedback)
+    user_feedback = [item for item in user_feedback if item['title'] != '']
+    print("USER FEEDBACK:", user_feedback)
+
     content_scored = recommend_books(books_df, genre, min_pages, max_pages)
 
     if len(user_feedback) > 1:

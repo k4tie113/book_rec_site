@@ -37,6 +37,7 @@ function HomePage() {
       }))
     };
     // FOR LOCAL TESTING: http://127.0.0.1:5000/api/recommend
+    // FOR WEB TESTING: https://bookrates.onrender.com/api/recommend
     fetch("https://bookrates.onrender.com/api/recommend", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -46,7 +47,7 @@ function HomePage() {
       .then(data => {
         navigate("/recommendations", { state: { recommendations: data } });
       })
-      .catch(err => alert("We're still working on connecting the Python scripts! Please hold tight and thanks for your patience."))
+      .catch(err => alert("Sorry, something went wrong. Our collaborative filter script is still being debugged, thank you for your patience!"))
       .finally(() => setLoading(false)); // Stop loading
   };
   
