@@ -39,17 +39,20 @@ def clean_book_title(title):
 
 @app.route('/api/recommend', methods=['POST'])
 def recommend_endpoint():
+    print("[DEBUG]: post request recieved")
     data = request.get_json()
-
+    print("[DEBUG]: .get_json"k)
     genre = data.get("genre")
     min_pages = data.get("min_pages")
     max_pages = data.get("max_pages")
+    print("[DEBUG]: got the min and max pages")
     user_feedback = data.get("user_feedback", [])
+    print("[DEBUG]: got the user feedback", user_feedback)
     user_feedback = [item for item in user_feedback if item['title'] != '']
-    print("USER FEEDBACK:", user_feedback)
+    print("[DEBUG] USER FEEDBACK:", user_feedback)
 
     content_scored = recommend_books(books_df, genre, min_pages, max_pages)
-
+    print("[DEBUG] content was scored")
     if len(user_feedback) > 0:
         collab_scored = compute_collab_scores(user_feedback, books_df)
     else:
