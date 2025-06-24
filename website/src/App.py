@@ -20,10 +20,18 @@ from recommend import (
 app = Flask(__name__)
 CORS(app)
 
+import psutil, os
 
 # Load book data once at startup
 
 books_df = load_clean_books(os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/goodreads_valid_books_young_adult.json.gz')))
+
+print("Memory (MB)", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
+
+
+@app.route("/health")
+def health_check():
+    return "Hello, World!",200
 
 # --- ADDED: Function to clean the title of series info ---
 def clean_book_title(title):
