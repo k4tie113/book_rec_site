@@ -12,7 +12,7 @@ import sys
 import traceback           # for printing full tracebacks in error handling
 
 # === STEP 1: Load interaction data with rating > 0 ===
-def load_valid_interactions(file_path, max_records=1_000_000):
+def load_valid_interactions(file_path, max_records=10_000):
     # Construct the cache path relative to this script
     # This assumes a structure like: my_project/backend/src/colab_filter.py
     # and cache directory: my_project/backend/cache/
