@@ -41,7 +41,7 @@ def clean_book_title(title):
 def recommend_endpoint():
     print("[DEBUG]: post request recieved")
     data = request.get_json()
-    print("[DEBUG]: .get_json"k)
+    print("[DEBUG]: .get_json")
     genre = data.get("genre")
     min_pages = data.get("min_pages")
     max_pages = data.get("max_pages")
