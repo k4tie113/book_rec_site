@@ -36,8 +36,8 @@ function HomePage() {
         liked: b.liked === "liked"
       }))
     };
-  
-    fetch("http://127.0.0.1:5000/api/recommend", {
+    // FOR LOCAL TESTING: http://127.0.0.1:5000/api/recommend
+    fetch("https://bookrates.onrender.com/api/recommend", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
