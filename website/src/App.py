@@ -50,7 +50,7 @@ def recommend_endpoint():
 
     content_scored = recommend_books(books_df, genre, min_pages, max_pages)
 
-    if len(user_feedback) > 1:
+    if len(user_feedback) > 0:
         collab_scored = compute_collab_scores(user_feedback, books_df)
     else:
         collab_scored = pd.DataFrame(columns=['book_id', 'collab_score'])
