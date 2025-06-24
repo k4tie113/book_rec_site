@@ -8,10 +8,11 @@ import numpy as np         # for numerical operations
 from scipy.sparse import lil_matrix          # for creating a sparse matrix
 from scipy.sparse.linalg import svds         # for truncated SVD (matrix factorization)
 import time                # for performance benchmarking
+import sys
 
 # === STEP 1: Load interaction data with rating > 0 ===
 def load_valid_interactions(file_path, max_records=1_000_000):
-    cache_path = "../backend/cache/user_scores.parquet"
+    cache_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../backend/cache/user_scores.parquet'))
     os.makedirs(os.path.dirname(cache_path), exist_ok=True)
 
     # If the cleaned parquet version already exists, load from cache
@@ -35,7 +36,7 @@ def load_valid_interactions(file_path, max_records=1_000_000):
 
 
 # === STEP 2: Compute collaborative filtering scores for a synthetic user ===
-def compute_collab_scores(user_feedback, books_df, interactions_path="../../data/goodreads_valid_interactions_young_adult.json.gz"):
+def compute_collab_scores(user_feedback, books_df, interactions_path=os.path.abspath(os.path.join(os.path.dirname(__file__), '../../data/goodreads_valid_interactions_young_adult.json.gz'))):
     start = time.time()
 
     # Load preprocessed user-book interaction dataset

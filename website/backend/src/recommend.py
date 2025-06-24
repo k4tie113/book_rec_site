@@ -71,7 +71,7 @@ def combine_scores(content_df, collab_df, alpha=1.0):
 
 # main entry
 def start_process():
-    books_df = load_clean_books("../../data/goodreads_valid_books_young_adult.json.gz")
+    books_df = load_clean_books(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../data/goodreads_valid_books_young_adult.json.gz')))
 
     genre_keyword = "mystery"
     min_pages = 200

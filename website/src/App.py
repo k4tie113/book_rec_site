@@ -22,7 +22,8 @@ CORS(app)
 
 
 # Load book data once at startup
-books_df = load_clean_books("../data/goodreads_valid_books_young_adult.json.gz")
+
+books_df = load_clean_books(os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/goodreads_valid_books_young_adult.json.gz')))
 
 # --- ADDED: Function to clean the title of series info ---
 def clean_book_title(title):
