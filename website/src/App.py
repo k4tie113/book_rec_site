@@ -61,6 +61,15 @@ def recommend_endpoint():
     final_df = combine_scores(content_scored, collab_scored, alpha=1.0)
     initial_recommendations = final_df[['title', 'description', 'image_url', 'url', 'final_score']].head(50).to_dict(orient='records') 
 
+    # --- NEW: Get clean titles of user's past reads for exclusion ---
+    user_read_clean_titles = set()
+    for feedback_item in user_feedback:
+        # Normalize and clean the title of past reads for comparison
+        if feedback_item['title']: # Ensure title is not empty
+            user_read_clean_titles.add(clean_book_title(feedback_item['title']))
+    print(f"DEBUG: User's past read clean titles to exclude: {user_read_clean_titles}")
+    # ----------------------------------------------------
+
     # title cleaning and duplicate removal logic
     cleaned_unique_recommendations = []
     seen_clean_titles = set()
@@ -68,6 +77,12 @@ def recommend_endpoint():
     for book in initial_recommendations:
         original_title = book['title']
         clean_title = clean_book_title(original_title)
+
+        # --- NEW: Filter out books matching user's past reads ---
+        if clean_title in user_read_clean_titles:
+            print(f"DEBUG: Skipping recommendation '{original_title}' (clean: '{clean_title}') as it matches a user's past read.")
+            continue # Skip this book if it was already read
+        # --------------------------------------------------------
         
         if clean_title not in seen_clean_titles:
             book['title'] = clean_title 
