@@ -37,8 +37,10 @@ function ContactPage() {
           <input name="subject" type="text" placeholder="Subject" style={{ padding: '10px', borderRadius: '8px', border: '3px solid white',fontFamily: 'Monaco'}} />
           <textarea name="message" placeholder="Your message!" rows="6" style={{ padding: '10px', borderRadius: '8px', border: '4px solid white' }} />
           <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-            <button type="submit" style={{ padding: '10px 20px', backgroundColor: 'rgba(100, 50, 50, 10)', color: '#fff', border: 'none', borderRadius: '6px',fontFamily: 'Monaco' }}>Send</button>
-            <button type="reset" style={{ padding: '10px 20px', backgroundColor: '#616161', color: '#fff', border: 'none', borderRadius: '6px',fontFamily: 'Monaco' }}>Clear</button>
+            <button type="submit" style={{ padding: '10px 20px', backgroundColor: 'rgba(100, 50, 50, 10)', color: '#fff', border: 'none', borderRadius: '6px',fontFamily: 'Monaco' }} onMouseOver={(e) => e.target.style.backgroundColor = '#ab938c'}
+        onMouseOut={(e) => e.target.style.backgroundColor = 'rgba(100, 50, 50, 10)'}>Send</button>
+            <button type="reset" style={{ padding: '10px 20px', backgroundColor: '#616161', color: '#fff', border: 'none', borderRadius: '6px',fontFamily: 'Monaco' }} onMouseOver={(e) => e.target.style.backgroundColor = 'gray'}
+        onMouseOut={(e) => e.target.style.backgroundColor = '#616161'}>Clear</button>
           </div>
         </form>
       </div>
