@@ -40,6 +40,7 @@ def clean_book_title(title):
 @app.route('/api/recommend', methods=['POST'])
 def recommend_endpoint():
     print("[DEBUG]: post request recieved")
+    print("Memory (MB) when receiving request", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
     data = request.get_json()
     print("[DEBUG]: .get_json")
     genre = data.get("genre")
@@ -52,14 +53,21 @@ def recommend_endpoint():
     print("[DEBUG] USER FEEDBACK:", user_feedback)
 
     content_scored = recommend_books(books_df, genre, min_pages, max_pages)
+
+    print("Memory (MB) when recommend_books", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
+
     print("[DEBUG] content was scored")
     if len(user_feedback) > 0:
         collab_scored = compute_collab_scores(user_feedback, books_df)
     else:
         collab_scored = pd.DataFrame(columns=['book_id', 'collab_score'])
 
+    print("Memory (MB) when compute_collab_scores", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
+
     final_df = combine_scores(content_scored, collab_scored, alpha=1.0)
     initial_recommendations = final_df[['title', 'description', 'image_url', 'url', 'final_score']].head(50).to_dict(orient='records') 
+
+    print("Memory (MB) when combine_scores", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
 
     # --- NEW: Get clean titles of user's past reads for exclusion ---
     user_read_clean_titles = set()
@@ -69,6 +77,8 @@ def recommend_endpoint():
             user_read_clean_titles.add(clean_book_title(feedback_item['title']))
     print(f"DEBUG: User's past read clean titles to exclude: {user_read_clean_titles}")
     # ----------------------------------------------------
+
+    print("Memory (MB) when user_read_clean_titles", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
 
     # title cleaning and duplicate removal logic
     cleaned_unique_recommendations = []
@@ -94,6 +104,8 @@ def recommend_endpoint():
             break
 
     result = cleaned_unique_recommendations #use the cleaned and unique list
+
+    print("Memory (MB) when completing request", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
 
     return jsonify(result)
 
