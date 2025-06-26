@@ -6,7 +6,7 @@ from colab_filter import compute_collab_scores
 import gzip
 import json
 
-# === Load and clean books ===
+#load and clean
 def load_clean_books(file_path):
     books = []
     with gzip.open(file_path, 'rt', encoding='utf-8') as f:
@@ -21,13 +21,13 @@ def load_clean_books(file_path):
     return df
 
 
-# === Combine scores ===
+#combine scores
 def combine_scores(content_df, collab_df, alpha=1.0):
     if collab_df.empty:
         content_df['collab_score'] = 0  # pad missing column
         content_df['final_score'] = content_df['score']
         merged = content_df
-        # SQUARE ROOT SCALLING
+        # SQUARE ROOT SCALLING – REMOVE IF NECESSARY
         if not merged.empty:
             min_final_score = merged['final_score'].min()
             max_final_score = merged['final_score'].max()
@@ -40,6 +40,7 @@ def combine_scores(content_df, collab_df, alpha=1.0):
             merged['final_score'] = np.sqrt(normalized_scores) * 100
         else:
             merged['final_score'] = 50 if len(merged) > 1 else 90
+        # SQUARE ROOT SCALLING – REMOVE ABOVE IF NECESSARY
 
         return merged.sort_values(by='final_score', ascending=False)
 
@@ -56,7 +57,7 @@ def combine_scores(content_df, collab_df, alpha=1.0):
 
     merged['final_score'] = merged['score'] + alpha * merged['collab_score']
 
-    #SQUARE ROOT SCALING
+    #SQUARE ROOT SCALING - MAY WANT TO REMOVE
     if not merged.empty:
         min_final_score = merged['final_score'].min()
         max_final_score = merged['final_score'].max()
@@ -66,6 +67,7 @@ def combine_scores(content_df, collab_df, alpha=1.0):
             merged['final_score'] = np.sqrt(normalized_scores) * 100
         else:
             merged['final_score'] = 50 if len(merged) > 1 else 90
+    #SQUARE ROOT SCALING - MAY WANT TO REMOVE
 
     return merged.sort_values(by='final_score', ascending=False)
 
@@ -82,7 +84,7 @@ def start_process():
         {"title": "Twilight", "liked": False},
     ]
 
-    # Attach book titles to books_df so colab_filter can access them
+    #attach book titles to books_df so colab_filter can access them
     books_df['title'] = books_df.get('title', '')  # ensure title column exists
 
     content_scored = recommend_books(
@@ -94,7 +96,7 @@ def start_process():
     #print("[DEBUG] After recommend_books:", content_scored.columns.tolist())
     
 
-    #print("\n🟦 Columns BEFORE combine_scores (content_scored):")
+    #print("\n Columns BEFORE combine_scores (content_scored):")
     #print(content_scored.columns.tolist())
 
     if user_feedback:
@@ -103,7 +105,7 @@ def start_process():
         collab_scored = pd.DataFrame(columns=['book_id', 'collab_score'])
 
     combined = combine_scores(content_scored, collab_scored, alpha=1.0)
-    #print("\n🟨 Columns AFTER combine_scores (combined):")
+    #print("\n Columns AFTER combine_scores (combined):")
     #print(combined.columns.tolist())
 
     #print("\n\U0001F4DA Top Hybrid Recommendations:\n")

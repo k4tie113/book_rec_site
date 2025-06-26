@@ -1,13 +1,13 @@
 # PART 2 COLAB Filter
 
 import gzip                # for reading compressed .json.gz interaction file
-import json                # for parsing JSON lines
+import json                
 import os                  # for file path checks and directory creation
 import pandas as pd        # for tabular data handling
 import numpy as np         # for numerical operations
-from scipy.sparse import lil_matrix, csr_matrix # Import csr_matrix for efficient SVD
-from scipy.sparse.linalg import svds         # for truncated SVD (matrix factorization)
-import time                # for performance benchmarking
+from scipy.sparse import lil_matrix, csr_matrix # import csr_matrix for efficient SVD
+from scipy.sparse.linalg import svds         # for matrix factorization
+import time                # for performance 
 import sys
 import traceback           # for printing full tracebacks in error handling
 import gc
@@ -25,7 +25,7 @@ def load_valid_interactions(file_path, max_records=150_000):
     print(f"DEBUG: Cache not found, processing {file_path}")
 
     chunks = []
-    chunk_size = 5000  # You can tune this (smaller = less memory)
+    chunk_size = 5000  # unsure if needed
     current_chunk = []
     count = 0
 
@@ -66,7 +66,7 @@ def compute_collab_scores(user_feedback, books_df,
     start = time.time()
     print(f"DEBUG: Starting compute_collab_scores. Interactions file path: {interactions_path}")
 
-    # === STEP 1: Load valid interactions ===
+    #load valid interactions
     try:
         df = load_valid_interactions(interactions_path)
     except Exception as e:
@@ -75,7 +75,7 @@ def compute_collab_scores(user_feedback, books_df,
 
     print(f"[TIMING] load_valid_interactions took {time.time() - start:.2f} seconds")
 
-    # Filter to only include relevant books
+    #filter to only include relevant books
     valid_book_ids = set(books_df['book_id'])
     df = df[df['book_id'].isin(valid_book_ids)]
     print(f"DEBUG: Filtered to {len(df)} interactions after book_id filtering.")
@@ -84,7 +84,7 @@ def compute_collab_scores(user_feedback, books_df,
         print("WARNING: No interactions match the filtered books.")
         return pd.DataFrame(columns=['book_id', 'collab_score'])
 
-    # === STEP 2: Indexing users/books ===
+    #indexing users/books
     user_ids = df['user_id'].unique()
     book_ids = df['book_id'].unique()
     user_map = {uid: idx for idx, uid in enumerate(user_ids)}
@@ -97,7 +97,7 @@ def compute_collab_scores(user_feedback, books_df,
     df['user_idx'] = df['user_id'].map(user_map).fillna(-1).astype(int)
     df['book_idx'] = df['book_id'].map(book_map).fillna(-1).astype(int)
 
-    # === STEP 3: Build sparse matrix ===
+    #build sparse matrix
     R = lil_matrix((num_users, num_books))
     user_indices = df['user_idx'].to_numpy()
     book_indices = df['book_idx'].to_numpy()
@@ -112,11 +112,11 @@ def compute_collab_scores(user_feedback, books_df,
     R[user_indices[valid_mask], book_indices[valid_mask]] = ratings[valid_mask]
     print(f"[TIMING] Sparse matrix creation took {time.time() - start:.2f} seconds")
 
-    # Free memory from DataFrame and arrays
+    #free memory from DataFrame and arrays
     del df, user_indices, book_indices, ratings
     gc.collect()
 
-    # === STEP 4: Add synthetic user feedback ===
+    #add user feedback
     synthetic_user_idx = num_users - 1
     book_title_map = books_df.set_index(books_df['title'].str.lower().str.strip())['book_id'].to_dict()
 
@@ -133,7 +133,7 @@ def compute_collab_scores(user_feedback, books_df,
 
     print(f"[TIMING] Synthetic feedback added at {time.time() - start:.2f} seconds")
 
-    # === STEP 5: SVD and scoring ===
+    #SVD importnat part
     R_sparse_csr = R.tocsr()
     del R
     gc.collect()
@@ -147,7 +147,7 @@ def compute_collab_scores(user_feedback, books_df,
         U, sigma, Vt = svds(R_sparse_csr, k=k)
         sigma = np.diag(sigma)
 
-        # Efficiently compute only synthetic user's predictions
+        #COMPUTE ONLY USER'S PREDICTION
         user_vector = U[synthetic_user_idx] @ sigma @ Vt
         user_scores = user_vector
 

@@ -104,7 +104,7 @@ function App() {
         backgroundColor: '#1e140a', // adding dark brown background color
         backgroundImage: `url(${grainyBackground})`, // Use the imported image
         backgroundRepeat: 'repeat', // Makes the grainy texture repeat
-        backgroundSize: 'auto', // Or 'cover'/'contain' if bg.png is a large image
+        backgroundSize: 'auto',
         minHeight: '100vh',
       }}>
         {/* Navbar */}

@@ -36,10 +36,9 @@ print("Memory (MB)", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
 def health_check():
     return "Hello, World!",200
 
-# --- ADDED: Function to clean the title of series info ---
+#Function to clean the title of series info
 def clean_book_title(title):
     return re.sub(r'\s*\([^)]*\)\s*$', '', title)
-# --------------------------------------------------------
 
 @app.route('/api/recommend', methods=['POST'])
 def recommend_endpoint():
@@ -81,18 +80,16 @@ def recommend_endpoint():
     gc.collect()
     print("Memory (MB) when combine_scores collect", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
 
-    # --- NEW: Get clean titles of user's past reads for exclusion ---
+    # get clean titles of user's past reads for exclusion
     user_read_clean_titles = set()
     for feedback_item in user_feedback:
-        # Normalize and clean the title of past reads for comparison
-        if feedback_item['title']: # Ensure title is not empty
+        if feedback_item['title']: #ensure title is not empty
             user_read_clean_titles.add(clean_book_title(feedback_item['title']))
     print(f"DEBUG: User's past read clean titles to exclude: {user_read_clean_titles}")
-    # ----------------------------------------------------
 
-    print("Memory (MB) when user_read_clean_titles", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
+    #print("Memory (MB) when user_read_clean_titles", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
     gc.collect()
-    print("Memory (MB) when user_read_clean_titles collect", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
+    #print("Memory (MB) when user_read_clean_titles collect", psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024)
 
     # title cleaning and duplicate removal logic
     cleaned_unique_recommendations = []
@@ -102,11 +99,10 @@ def recommend_endpoint():
         original_title = book['title']
         clean_title = clean_book_title(original_title)
 
-        # --- NEW: Filter out books matching user's past reads ---
+        # filter out books matching user's past reads
         if clean_title in user_read_clean_titles:
-            print(f"DEBUG: Skipping recommendation '{original_title}' (clean: '{clean_title}') as it matches a user's past read.")
-            continue # Skip this book if it was already read
-        # --------------------------------------------------------
+            #print(f"DEBUG: Skipping recommendation '{original_title}' (clean: '{clean_title}') as it matches a user's past read.")
+            continue
         
         if clean_title not in seen_clean_titles:
             book['title'] = clean_title 
