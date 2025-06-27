@@ -27,10 +27,27 @@ function HomePage() {
 
   const handleSearch = () => {
     setLoading(true);
+    const minPageNum = parseInt(minPage, 10);
+    const maxPageNum = parseInt(maxPage, 10);
+
+    //alert("Parsed min: " + minPageNum + " max: " + maxPageNum);
+
+    if (
+      isNaN(minPageNum) ||
+      isNaN(maxPageNum) ||
+      minPageNum < 0 ||
+      maxPageNum < 1 ||
+      minPageNum > maxPageNum
+    ) {
+      alert("Invalid page range.");
+      setLoading(false);
+      return;
+    }
+
     const payload = {
       genre: selectedGenre,
-      min_pages: minPage,
-      max_pages: maxPage,
+      min_pages: minPageNum,
+      max_pages: maxPageNum,
       user_feedback: userBooks.map(b => ({
         title: b.title?.value || "",
         liked: b.liked === "liked"
@@ -47,7 +64,10 @@ function HomePage() {
       .then(data => {
         navigate("/recommendations", { state: { recommendations: data } });
       })
-      .catch(err => alert("Sorry, something went wrong. Our collaborative filter script is still being debugged, thank you for your patience!"))
+      .catch(err => {
+        console.error("Fetch error:", err);
+        alert("Sorry, something went wrong, and we weren't able to process your input. Try filling out the form again!");
+      })
       .finally(() => setLoading(false)); // Stop loading
   };
   
