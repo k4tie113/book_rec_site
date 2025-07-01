@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import backgroundImage from '../images/bookrates.png';
+import './Recommendations.css';
 
 const Recommendations = () => {
   const location = useLocation();
-  //ensure recs is an array and slice the first 5 if available
   const recs = Array.isArray(location.state?.recommendations)
     ? location.state.recommendations.slice(0, 5)
     : [];
 
-  //state to manage which descriptions are expanded
   const [expandedDescriptions, setExpandedDescriptions] = useState({});
   const [hoveredTitleIdx, setHoveredTitleIdx] = useState(null);
-  //function to toggle the expanded state for a specific book.
   const toggleDescription = (idx) => {
     setExpandedDescriptions(prevState => ({
       ...prevState,
@@ -22,47 +20,20 @@ const Recommendations = () => {
 
   return (
     <div
+      className="recommendations-page-container"
       style={{
-        padding: '70px',
-        fontFamily: 'Monaco',
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        minHeight: '100vh',
-        color: '#fff',
       }}
     >
-      <div style={{
-        padding: '30px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: '20px', // spacing between logo and text
-        marginBottom: '20px'
-      }}>
-        <h1 style={{ margin: 0, textAlign: 'center', fontFamily: 'Tangerine, cursive', fontSize: '60px' }}>
+      <div className="recommendations-header">
+        <h1 className="recommendations-title">
           Your Recommendations
         </h1>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
-        {/* Conditional rendering based on recs array length */}
+      <div className="recommendations-list-container">
         {recs.length === 0 ? (
-          <div style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.6)',
-            color: '#fff',
-            borderRadius: '12px',
-            padding: '30px',
-            textAlign: 'center',
-            maxWidth: '700px',
-            margin: '20px auto',
-            boxShadow: '0 4px 15px rgba(0, 0, 0, 0.4)',
-            fontSize: '1.2em',
-            lineHeight: '1.6',
-            fontFamily: '"Fira Code", monospace',
-          }}>
+          <div className="no-recs-message">
             <p>Sorry, we weren't able to find you recommendations based on your inputs.</p>
             <p>Try broadening the page range, or switching to a more popular genre.</p>
           </div>
@@ -81,77 +52,42 @@ const Recommendations = () => {
             return (
               <div
                 key={idx}
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'flex-start',
-                  backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                  color: '#fff',
-                  borderRadius: '12px',
-                  padding: '20px',
-                  boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
-                  maxWidth: '850px',
-                  margin: '0 auto',
-                }}
+                className="recommendation-card"
               >
                 <img
                   src={book.image_url}
                   alt={cleanTitle}
-                  style={{
-                    width: '120px',
-                    height: '180px',
-                    objectFit: 'cover',
-                    borderRadius: '8px',
-                    marginRight: '20px',
-                    flexShrink: 0,
-                  }}
+                  className="recommendation-card-image"
                 />
-                <div style={{ flex: 1 }}>
+                <div className="recommendation-card-content">
               
-                  <h2 style={{ marginTop: 0, marginBottom: '10px', fontFamily: '"Fira Code", monospace'}}>
+                  <h2 className="recommendation-card-title">
                     <a
                       href={book.url}
-                      target="_blank" //opens the link in a new tab
-                      rel="noopener noreferrer" //security best practice for target="_blank"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onMouseEnter={() => setHoveredTitleIdx(idx)}
                       onMouseLeave={() => setHoveredTitleIdx(null)}
                       style={{
-                        color: hoveredTitleIdx === idx ? '#CCCCCC' : 'inherit', //change to gray on hover
-                        textDecoration: 'none',
-                        cursor: 'pointer'
+                        color: hoveredTitleIdx === idx ? '#CCCCCC' : 'inherit',
                       }}
                     >
                       {cleanTitle}
                     </a>
                   </h2>
 
-                  {/* ADDED: Overall Score section */}
-                  {book.final_score !== undefined && ( //only display if final_score exists
-                    <p style={{
-                      marginTop: '-5px', //reduce top margin to bring it closer to the title
-                      marginBottom: '10px',
-                      fontFamily: '"Fira Code", monospace',
-                      color: 'white', //explicitly set to white as per description color
-                      fontSize: '15px', //slightly smaller than title, larger than description
-                      lineHeight: '1.2',
-                    }}>
-                      Score: {book.final_score.toFixed(3)} {/* Display score, formatted to 2 decimal places */}
+                  {book.final_score !== undefined && (
+                    <p className="recommendation-score">
+                      Score: {book.final_score.toFixed(3)}
                     </p>
                   )}
 
-
-                  <p style={{ fontSize: '14px', lineHeight: '1.5', wordWrap: 'break-word', fontFamily: '"Fira Code", monospace'}}>
+                  <p className="recommendation-description">
                     {displayDescription}
                     {needsTruncation && (
                       <span
                         onClick={() => toggleDescription(idx)}
-                        style={{
-                          color: 'white', 
-                          cursor: 'pointer',
-                          marginLeft: '5px',
-                          textDecoration: 'underline',
-                          whiteSpace: 'nowrap'
-                        }}
+                        className="recommendation-description-toggle"
                       >
                         [{isExpanded ? 'See Less' : 'See More'}]
                       </span>

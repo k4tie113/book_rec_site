@@ -1,0 +1,99 @@
+/* src/components/HomepageBanner.css */
+
+.homepage-banner-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.homepage-banner-inner {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+.homepage-banner-title {
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    padding: 0;
+    font-weight: 700;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.7);
+    white-space: nowrap;
+}
+
+.homepage-banner-subtitle {
+    font-family: "Fira Code", monospace;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* This is the key addition for mobile background image fitting */
+@media (max-width: 1024px) {
+    .homepage-banner-section {
+        background-attachment: scroll; /* Forces background to scroll with content, fixing mobile scaling */
+        /* You might also consider adjusting min-height further for smaller devices if 100vh still causes issues */
+        /* min-height: 80vh; */ /* Example adjustment for smaller mobile screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .homepage-banner-section {
+        padding-top: 90px;
+        padding-bottom: 30px;
+        min-height: 70vh;
+    }
+
+    .homepage-banner-inner {
+        padding: 15px 20px;
+        max-width: 95%;
+    }
+
+    .homepage-banner-title {
+        font-size: 40px;
+        margin: 15px 0;
+        letter-spacing: 1px;
+        white-space: normal;
+    }
+
+    .homepage-banner-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage-banner-section {
+        padding-top: 80px;
+        padding-bottom: 20px;
+        min-height: 60vh;
+    }
+
+    .homepage-banner-inner {
+        padding: 10px 15px;
+        max-width: 98%;
+    }
+
+    .homepage-banner-title {
+        font-size: 32px;
+        margin: 10px 0;
+        letter-spacing: 0;
+    }
+
+    .homepage-banner-subtitle {
+        font-size: 14px;
+    }
+}

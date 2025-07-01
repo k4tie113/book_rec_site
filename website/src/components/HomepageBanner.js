@@ -79,6 +79,7 @@ function HomepageBanner() {
             <h2
             style={{
             fontFamily: 'Tangerine, cursive',
+            textShadow: '0px 0px 3px rgba(255, 255, 255, 0.7)',
             fontSize: '50px',
             margin: '20px 0',
             letterSpacing: '2px',      

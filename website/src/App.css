@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=block');
+
+@font-face {
+  font-family: "Tangerine", cursive;
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://fonts.gstatic.com/s/tangerine/v16/Iurc6Y_tEdoQjM0b_YLl_L22.woff2') format('woff2');
+  font-display: block; /* This is the key to preventing the jump (FOUT) */
+}
 
 
 .App {
