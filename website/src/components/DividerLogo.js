@@ -17,7 +17,7 @@ const DividerLogo = () => {
         backgroundSize: '100% 100%',
         margin: '0 30px'
       }} />
-      <h1 style={{ color: 'white', fontFamily: 'Tangerine, cursive', fontSize: '60px'}}>
+      <h1 style={{ color: 'white', fontFamily: 'Tangerine, cursive', fontSize: '60px', textShadow: '1px 0px 5px rgba(255, 255, 255, 0.7)'}}>
       Enter Your Preferences
       </h1>
 
