@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import DividerLogo from './components/DividerLogo';
 import ScrollToTop from './components/ScrollToTop';
 import grainyBackground from './images/bg.png';
-
+import Navbar from './components/Navbar';
 function HomePage() {
 
 
@@ -121,34 +121,15 @@ function App() {
     <Router>
       <div style={{
         fontFamily: 'Monaco',
-        backgroundColor: '#1e140a', // adding dark brown background color
-        backgroundImage: `url(${grainyBackground})`, // Use the imported image
-        backgroundRepeat: 'repeat', // Makes the grainy texture repeat
+        backgroundColor: '#1e140a',
+        backgroundImage: `url(${grainyBackground})`,
+        backgroundRepeat: 'repeat',
         backgroundSize: 'auto',
         minHeight: '100vh',
       }}>
-        {/* Navbar */}
-        <nav
-          style={{
-            position: 'fixed',       // make it sticky
-            top: 0,                  // stick to the top
-            width: '100%',          // stretch across the top
-            zIndex: 1000,           // sit above other content
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '40px',
-            padding: '20px',
-            backgroundColor: '#1e140a',
-            fontSize: '18px',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // adds slight shadow
-          }}
-        >
-          <Link to="/" style={{ textDecoration: 'none', color: 'white', fontFamily: '"Fira Code", monospace' }}>Home</Link>
-          <Link to="/learnmore" style={{ textDecoration: 'none', color: 'white', fontFamily: '"Fira Code", monospace' }}>Learn More</Link>
-          <Link to="/contact" style={{ textDecoration: 'none', color: 'white', fontFamily: '"Fira Code", monospace' }}>Contact Us</Link>
-        </nav>
+        {/* Updated to use Navbar */}
+        <Navbar />
 
-        {/* Routes */}
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -159,6 +140,6 @@ function App() {
       </div>
     </Router>
   );
-}
+  }
 
 export default App;
