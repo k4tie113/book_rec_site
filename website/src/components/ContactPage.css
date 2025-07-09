@@ -18,7 +18,7 @@
     margin-bottom: 20px;
     color: #FFFFFF;
     font-family: 'Tangerine', cursive;
-    font-size: 40px; /* Default font size */
+    font-size: 50px; /* Default font size */
     letter-spacing: 2px;
     text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.7); /* The glow effect */
 }
@@ -113,7 +113,7 @@
     }
 
     .contact-heading {
-        font-size: 35px;
+        font-size: 40px;
         letter-spacing: 1px;
         text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.7); 
     }
@@ -152,7 +152,7 @@
     }
 
     .contact-heading {
-        font-size: 30px; 
+        font-size: 35px; 
         letter-spacing: 0px;
         text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.7); 
     }

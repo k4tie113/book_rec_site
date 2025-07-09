@@ -80,7 +80,7 @@ function HomepageBanner() {
             style={{
             fontFamily: 'Tangerine, cursive',
             textShadow: '0px 0px 3px rgba(255, 255, 255, 0.7)',
-            fontSize: '35px',
+            fontSize: '45px',
             margin: '20px 0',
             letterSpacing: '2px',      
             padding: '0'

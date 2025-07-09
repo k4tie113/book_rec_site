@@ -44,6 +44,7 @@ function HomePage() {
       return;
     }
 
+
     const payload = {
       genre: selectedGenre,
       min_pages: minPageNum,
@@ -66,7 +67,7 @@ function HomePage() {
       })
       .catch(err => {
         console.error("Fetch error:", err);
-        alert("Sorry, something went wrong, and we weren't able to process your input. Try filling out the form again!");
+        alert("Sorry, something went wrong, and we weren't able to find you recommendations! Try broadening your page range.");
       })
       .finally(() => setLoading(false)); // Stop loading
   };

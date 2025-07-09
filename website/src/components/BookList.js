@@ -39,7 +39,7 @@ const BookList = ({ books, setBooks }) => {
         boxShadow: '0 0 15px rgba(0, 0, 0, 0.4)',
         maxWidth: '600px'
       }}>
-        <h2 style={{ textAlign: 'center', fontFamily: 'Tangerine, cursive', fontSize: '30px' }}>Add Books You've Read</h2>
+        <h2 style={{ textAlign: 'center', fontFamily: 'Tangerine, cursive', fontSize: '40px' }}>Add Books You've Read</h2>
         <p style = {{ textAlign: 'center', fontFamily: '"Fira Code", monospace', color: 'black', marginLeft: '5%', marginRight: '5%'}}>Share your past reads to help us refine your recommendations! </p>
         <p style = {{ textAlign: 'center', fontFamily: '"Fira Code", monospace', color: 'black', marginLeft: '5%', marginRight: '5%'}}>(Our collection is continuously expanding – if you don't see a title you're looking for, check back soon)</p>
         {books.map((book, index) => (

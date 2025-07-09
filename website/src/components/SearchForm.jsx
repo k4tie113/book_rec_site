@@ -17,7 +17,7 @@ const SearchForm = ({ genre, setGenre, minPage, setMinPage, maxPage, setMaxPage 
     >
       {/* Genre */}
       <div style={{ marginBottom: '25px' }}>
-        <label style={{ fontWeight: 'bold', marginRight: '10px', fontFamily: 'Tangerine, cursive', fontSize: '25px'}}>Genre:</label>
+        <label style={{ fontWeight: 'bold', marginRight: '10px', fontFamily: 'Tangerine, cursive', fontSize: '35px'}}>Genre:</label>
         <select
           value={genre}
           onChange={(e) => setGenre(e.target.value)}
@@ -66,7 +66,7 @@ const SearchForm = ({ genre, setGenre, minPage, setMinPage, maxPage, setMaxPage 
 
       {/* Page Range */}
       <div style={{ marginBottom: '25px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <label style={{ marginRight: '10px', fontWeight: 'bold', minWidth: '120px', fontFamily: 'Tangerine, cursive', fontSize: '25px' }}>
+        <label style={{ marginRight: '10px', fontWeight: 'bold', minWidth: '120px', fontFamily: 'Tangerine, cursive', fontSize: '35px' }}>
           Pages:
         </label>
         <input
@@ -87,7 +87,7 @@ const SearchForm = ({ genre, setGenre, minPage, setMinPage, maxPage, setMaxPage 
             fontFamily: 'Monaco'
           }}
         />
-        <span style={{ color: 'black', fontWeight: 'bold', fontFamily: 'Tangerine, cursive', fontSize: '20px'}}> to </span>
+        <span style={{ color: 'black', fontWeight: 'bold', fontFamily: 'Tangerine, cursive', fontSize: '30px'}}> to </span>
         <input
           type="text"
           inputMode="numeric"
