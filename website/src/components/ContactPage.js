@@ -70,10 +70,8 @@ function ContactPage() {
         
         <p className="contact-description" style={{ fontFamily: '"Fira Code", monospace' }}>
           <Typewriter
-            words={['We are happy to hear suggestions.']}
-            loop={1}
-            cursor
-            typeSpeed={40}
+            words={['We are happy to hear suggestions!']}
+            typeSpeed={30}
             onType={startTypingSound}
             onDone={stopTypingSound}
           />

@@ -69,7 +69,7 @@ const Recommendations = () => {
                       onMouseEnter={() => setHoveredTitleIdx(idx)}
                       onMouseLeave={() => setHoveredTitleIdx(null)}
                       style={{
-                        color: hoveredTitleIdx === idx ? '#CCCCCC' : 'inherit',
+                        color: hoveredTitleIdx === idx ? '#b7b7b7' : 'inherit',
                       }}
                     >
                       {cleanTitle}

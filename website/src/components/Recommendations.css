@@ -28,7 +28,7 @@
     text-align: center;
     font-family: 'Tangerine', cursive;
     text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.7); /* The glow effect */
-    font-size: 60px;
+    font-size: 45px;
 }
 
 .recommendations-list-container {
@@ -93,7 +93,7 @@
 }
 
 .recommendation-card-title a:hover {
-    color: #CCCCCC;
+    color: #b7b7b7;
 }
 
 .recommendation-score {
@@ -131,7 +131,7 @@
     }
 
     .recommendations-title {
-        font-size: 45px;
+        font-size: 35px;
         text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.7); /* The glow effect */
     }
 
@@ -190,7 +190,7 @@
     }
 
     .recommendations-title {
-        font-size: 45px;
+        font-size: 30px;
         text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.7); /* The glow effect */
     }
 

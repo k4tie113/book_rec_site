@@ -56,12 +56,10 @@ function LearnMore() {
       >
         <div className="learn-more-content-box">
           <div className="learn-more-heading-wrapper">
-            <h2 className="learn-more-heading" style={{ fontFamily: '"Fira Code", monospace' }}>
+            <h2 className="learn-more-heading" style={{ fontFamily: '"Tangerine", cursive' }}>
               <Typewriter
                 words={['Our Algorithm']}
-                loop={1}
-                cursor
-                typeSpeed={50}
+                typeSpeed={30}
                 onType={startTypingSound}
                 onDone={stopTypingSound}
               />
@@ -70,12 +68,10 @@ function LearnMore() {
 
           <p className="learn-more-paragraph">We built our system using a combination of two existing recommendation strategies: content-based filtering and collaborative filtering. These methods work together to help you discover books that match both your preferences and your past reading experiences.</p>
 
-          <p className="learn-more-paragraph" style={{ fontFamily: '"Fira Code", monospace' }}>
+          <p className="learn-more-paragraph-white" style={{ fontFamily: '"Fira Code", monospace' }}>
             <Typewriter
               words={['Content Based Filtering']}
-              loop={1}
-              cursor
-              typeSpeed={40}
+              typeSpeed={30}
               onType={startTypingSound}
               onDone={stopTypingSound}
             />
@@ -83,12 +79,10 @@ function LearnMore() {
 
           <p className="learn-more-paragraph">Each book is evaluated based on attributes such as genre (shelf tags), number of pages, average rating, and ratings volume. We assign a weighted score to every candidate book based on how well it matches the user’s specified preferences. To ensure genre relevance, the requested genre must appear in the book’s top shelves with a minimum frequency threshold.</p>
 
-          <p className="learn-more-paragraph" style={{ fontFamily: '"Fira Code", monospace' }}>
+          <p className="learn-more-paragraph-white" style={{ fontFamily: '"Fira Code", monospace' }}>
             <Typewriter
               words={['Collaborative Filtering']}
-              loop={1}
-              cursor
-              typeSpeed={40}
+              typeSpeed={30}
               onType={startTypingSound}
               onDone={stopTypingSound}
             />
@@ -98,11 +92,9 @@ function LearnMore() {
 
           <p className="learn-more-paragraph">We combine both content scores and collaborative scores (if feedback is provided) to produce a ranked list of books tailored just for you.</p>
 
-          <p className="learn-more-paragraph" style={{ fontFamily: '"Fira Code", monospace' }}>
+          <p className="learn-more-paragraph-white" style={{ fontFamily: '"Fira Code", monospace' }}>
             <Typewriter
               words={['Data Source']}
-              loop={1}
-              cursor
               typeSpeed={100}
               onType={startTypingSound}
               onDone={stopTypingSound}
@@ -118,7 +110,7 @@ function LearnMore() {
       {/* New black section for citations */}
       <div className="citations-container">
         <div className="citations-content">
-          <h3>Citations</h3>
+          <h3 style = {{color: 'white'}}>Citations</h3>
           <ul style={{ paddingLeft: '20px' }}>
             <li>
               Mengting Wan, Julian McAuley,
